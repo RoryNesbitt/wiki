@@ -2,7 +2,7 @@
 title: Unraid install
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-19T22:30:49.658Z
+date: 2021-06-19T22:30:58.816Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-19T22:29:07.551Z
