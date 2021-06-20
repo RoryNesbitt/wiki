@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2021-06-18T21:03:58.476Z
 ---
 
-<img src="/rnd.png" style="width:100px;height:100px;float:right;">
+<img src="/assets/general/rnd.png" style="width:100px;height:100px;float:right;">
 
 # Docs
 
