@@ -12,12 +12,13 @@ dateCreated: 2021-06-18T21:03:58.476Z
 
 # Docs
 
-Welcome to my documentation for my home automation services and IoT projects.
-This is a work in progress and is mostly to keep track of what I have done for the sake of reproduction so some(most) pages will be incomplete.
+>This is the documentation for my home automation services and IoT projects.  
+It is a work in progress and is mostly to keep track of what I have done for the sake of reproduction so some(most) pages will be incomplete.
 
 ## Contents
-[Jackdaw](jackdaw)  
-[Raspberry Pis](rpi)
+- [Jackdaw *Main server*](/jackdaw)  
+- [Raspberry Pis *Docker & automation*](/rpi)
+{.links-list}
 
 
 ---
