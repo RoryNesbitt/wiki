@@ -2,7 +2,7 @@
 title: Unraid installation 
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-20T11:55:51.405Z
+date: 2021-06-20T21:16:27.806Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-18T21:20:09.447Z
@@ -32,11 +32,13 @@ An array pool can contain up to 30 drives, 28 storage and 2 parity. If using the
 I have two 1TB drives, one for storage and one for parity. Which is currently no better than a simple main and bckup but can scale easily.
 
 ### Add a cache drive
+Adding an SSD as a cache drive will speed up writes for the array, aswell as reads for shares stored only on cache.
 
 
 ---
 ## settings stuff idk
 ### Shares
+
 
 ### Docker
 
