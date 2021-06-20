@@ -2,7 +2,7 @@
 title: Unraid installation 
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-19T23:26:50.678Z
+date: 2021-06-20T11:46:11.773Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-18T21:20:09.447Z
@@ -13,9 +13,9 @@ dateCreated: 2021-06-18T21:20:09.447Z
 Firstly get the most up to date version of the [flash creation tool](https://unraid.net/download) and choose a high quality USB device to install on to. A USB 2.0 is recommended as the speed is not relevant and they seem to last longer than 3.0. I used a cisco branded USB, mostly as it has a flashing blue light when in use, which indicates when the server is writing to it. This doesn't happen often as unraid is loaded in to RAM.
 Choose the latest version and select the USB drive then start writing.
 ### Bios
-The bios has to be changed to <kbd>boot from USB</kbd> before anything else. Particularly if you plan to directly pass an SSD through to a VM as this could be booted from before the USB.
-In order to create that VM in the first place <kbd>virtualisation</kbd> has to be enabled in the BIOS too.
-It is a good idea at this point to turn on <kbd>Wake-on-LAN</kbd> if the motherboard supports it
+The bios has to be changed to `boot from USB` before anything else. Particularly if you plan to directly pass an SSD through to a VM as this could be booted from before the USB.
+In order to create that VM in the first place `virtualisation` has to be enabled in the BIOS too.
+It is a good idea at this point to turn on `Wake-on-LAN` if the motherboard supports it
 Save these settings and reboot.
 ### License
 Select use trial key. A full license can be purchased through the unraid gui at a later point. This will give you 30 days however this can be increased to 60 by requesting an extension during this time.
