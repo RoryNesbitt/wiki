@@ -2,7 +2,7 @@
 title: WikiJS
 description: Reminders for how to format the markdown
 published: 1
-date: 2021-06-20T23:51:15.644Z
+date: 2021-06-20T23:52:21.336Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-20T23:40:46.623Z
@@ -82,9 +82,9 @@ Line containing `some code` within.
 
 > Line containing \`some code\` within.
 
-Line containing shortcut such at <kbd>CTLR</kbd> <kbd>ALT</kbd> <kbd>DEL</kbd>.
+Line containing shortcut such as <kbd>CTLR</kbd> <kbd>ALT</kbd> <kbd>DEL</kbd>.
 
->Line containing shortcut such at \<kbd>CTLR\</kbd> \<kbd>ALT\</kbd> \<kbd>DEL\</kbd>.
+>Line containing shortcut such as \<kbd>CTLR\</kbd> \<kbd>ALT\</kbd> \<kbd>DEL\</kbd>.
 
 ```
 Block
@@ -103,7 +103,7 @@ code
 
 > --- produces a line
 
-## Blockquoting
+## Blockquotes
 
 > This is a 
 blockquote
