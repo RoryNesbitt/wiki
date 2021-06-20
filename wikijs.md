@@ -2,7 +2,7 @@
 title: WikiJS
 description: Reminders for how to format the markdown
 published: 1
-date: 2021-06-20T23:40:46.623Z
+date: 2021-06-20T23:49:51.150Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-20T23:40:46.623Z
@@ -12,26 +12,21 @@ dateCreated: 2021-06-20T23:40:46.623Z
 
 # H1
 
->`# H1`
-
 ## H2
-
->`## H2`
 
 ### H3
 
->`### H3`
-
 #### H4
-
->`#### H4`
 
 ##### H5
 
->`##### H5`
-
 ###### H6
 
+>`# H1`
+>`## H2`
+>`### H3`
+>`#### H4`
+>`##### H5`
 >`###### H6`
 
 ## Links
@@ -40,25 +35,25 @@ dateCreated: 2021-06-20T23:40:46.623Z
 
 ## Text Styling
 
-**Bold**
+This text is **Bold**.
 
->`**Bold**`
+>This text is \*\*Bold**
 
-*Italic*
+This text is *Italic*.
 
->`*Italic*`
+>This text is \*Italic*
 
-~~Strikethrough~~
+This text has a ~~Strikethrough~~.
 
->`~~Strikethrough~~`
+>\~\~Strikethrough~~
 
-Normal text~Subscript~
+This text is~Subscript~.
 
->`Normal text~Subscript~`
+>This text is\~Subscript~
 
-Normal text^Superscript^
+This text is ^Superscript^.
 
->`Normal text^Superscript^`
+>This text is\^Superscript^
 
 ## Lists
 
@@ -67,8 +62,8 @@ Normal text^Superscript^
 - items
 
 > \- Unordered
-> \- list
-> \- items
+\- list
+\- items
 
 1. Ordered
 1. list
@@ -76,9 +71,9 @@ Normal text^Superscript^
 
 
 > `1. All`
-> `1. numbers`
-> `1. are`
-> `1. one`
+`1. numbers`
+`1. are`
+`1. one`
 
 
 ## Code and keys
@@ -98,7 +93,7 @@ code
 ```
 
 
-\```
+>\```
 Block
 of
 code
@@ -110,30 +105,20 @@ code
 
 ## Blockquoting
 
-> This is a blockquote
+> This is a 
+blockquote
 
-> \> This is a blockquote
+> \> It is made with
+a <kbd>></kbd> before the first line
 
-> This is an info blockquote
+> It can become an info blockquote with `{.is-info}`
 {.is-info}
 
-> \> This is an info blockquote
-`{.is-info}`
-
-> This is a success blockquote
+> a success blockquote with `{.is-success}`
 {.is-success}
 
-> \> This is a success blockquote
-`{.is-success}`
-
-> This is a warning blockquote
+> a warning blockquote with `{.is-warning}`
 {.is-warning}
 
-> \> This is a warning blockquote
-`{.is-warning}`
-
-> This is an error blockquote
+> or an error blockquote with `{.is-danger}`
 {.is-danger}
-
-> \> This is an error blockquote
-`{.is-danger}`
