@@ -2,7 +2,7 @@
 title: Unraid installation 
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-20T11:51:16.358Z
+date: 2021-06-20T11:52:35.247Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-18T21:20:09.447Z
@@ -24,7 +24,7 @@ Select use trial key. A full license can be purchased through the unraid gui at 
 ## Storage
 ### Set up the array
 The Array is where the main storage for unraid is. I barely make use of this.
-An array pool can contain up to 30 drives, 28 storage and 2 parity. If using the unraid server as a NAS this gives a massive number of benefits.
+An array pool can contain up to 30 drives, 28 storage and 2 parity. If using the unraid server as a NAS this gives a good number of benefits.
 - Having only one or two drives as parity means you get a much higher percent of your storage to use as actual storage compared to raid.
 - As long as the parity drive matches or exceeds the size of the largest storage drive then the rest of them do not have to match.
 - Files are not stripped across drives like raid so if a drive fails and you do not have a parity drive the other drives will be unaffected.
