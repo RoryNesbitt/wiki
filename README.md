@@ -13,12 +13,9 @@ dateCreated: 2021-06-20T18:12:44.473Z
 ## Docs
 
 Welcome to my documentation wiki.
-> This page is not intended to be viewed through the actual wiki site, although it can. 
+> This page is not intended to be viewed through the actual wiki site, although it can.  
 It is for adding context to the [github repo](https://github.com/RoryNesbitt/wiki).
 {.is-warning}
-
-
-
 
 ## Github
 
