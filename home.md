@@ -18,9 +18,9 @@ Documentation for my home automation services and IoT projects.
 {.is-info}
 
 ## Contents
+
 - [Jackdaw *Main server*](/jackdaw)  
 - [Raspberry Pis *Docker & automation*](/rpi)
 {.links-list}
-
 
 ---

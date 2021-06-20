@@ -8,8 +8,6 @@ editor: markdown
 dateCreated: 2021-06-18T21:15:31.083Z
 ---
 
-# My many pis
-
 ## Blue
 
 ## Purple

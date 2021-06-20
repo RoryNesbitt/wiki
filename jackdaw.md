@@ -10,10 +10,10 @@ dateCreated: 2021-06-18T21:05:48.391Z
 
 This is my main server I use for home automation, running unraid
 
-## Unraid pages 
+## Unraid pages
 
-- [Installing unraid](/unraid/install) 
-- [Important plugins](/unraid/plugins) 
+- [Installing unraid](/unraid/install)
+- [Important plugins](/unraid/plugins)
 - [My containers](/unraid/docker)
 {.links-list}
 
