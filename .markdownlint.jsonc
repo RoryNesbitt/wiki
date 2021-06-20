@@ -1,0 +1,6 @@
+{
+    "default": true,
+    "MD013": false, //Line length
+    "MD028": false, //seperate block quotes with blank line
+    "MD033": false //inline HTML, used for floating images to the right
+  }
