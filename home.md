@@ -2,7 +2,7 @@
 title: Home
 description: Documentation for my servers
 published: 1
-date: 2021-06-20T11:34:36.012Z
+date: 2021-06-20T20:24:01.200Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-18T21:03:58.476Z
@@ -12,8 +12,9 @@ dateCreated: 2021-06-18T21:03:58.476Z
 
 # Docs
 
->This is the documentation for my home automation services and IoT projects.  
-It is a work in progress and is mostly to keep track of what I have done for the sake of reproduction so some(most) pages will be incomplete.
+This is the documentation for my home automation services and IoT projects.
+
+> It is a work in progress and is mostly to keep track of what I have done for the sake of reproduction so some(most) pages will be incomplete.
 {.is-info}
 
 ## Contents
