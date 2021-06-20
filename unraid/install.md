@@ -38,7 +38,7 @@ Adding an SSD as a cache drive will speed up writes for the array, as well as re
 ---
 ## settings stuff idk
 ### Shares
-
+Shares are the main method of storing data on unraid.
 
 ### Docker
 
