@@ -2,7 +2,7 @@
 title: Home
 description: Documentation for my servers
 published: 1
-date: 2021-06-19T22:40:56.240Z
+date: 2021-06-20T11:34:36.012Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-18T21:03:58.476Z
@@ -14,6 +14,7 @@ dateCreated: 2021-06-18T21:03:58.476Z
 
 >This is the documentation for my home automation services and IoT projects.  
 It is a work in progress and is mostly to keep track of what I have done for the sake of reproduction so some(most) pages will be incomplete.
+{.is-info}
 
 ## Contents
 - [Jackdaw *Main server*](/jackdaw)  
