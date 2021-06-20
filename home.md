@@ -10,8 +10,6 @@ dateCreated: 2021-06-18T21:03:58.476Z
 
 <img src="/assets/general/rnd.png" style="width:100px;height:100px;float:right;">
 
-# Docs
-
 Documentation for my home automation services and IoT projects.
 
 > this is a work in progress and is mostly to keep track of what I have done for the sake of reproduction so some(most) pages will be incomplete.
