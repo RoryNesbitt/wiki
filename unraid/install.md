@@ -2,7 +2,7 @@
 title: Unraid installation 
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-20T21:16:27.806Z
+date: 2021-06-20T21:20:05.082Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-18T21:20:09.447Z
@@ -29,10 +29,10 @@ An array pool can contain up to 30 drives, 28 storage and 2 parity. If using the
 - As long as the parity drive matches or exceeds the size of the largest storage drive then the rest of them do not have to match.
 - Files are not stripped across drives like raid so if a drive fails and you do not have a parity drive the other drives will be unaffected.
 
-I have two 1TB drives, one for storage and one for parity. Which is currently no better than a simple main and bckup but can scale easily.
+I have two 1TB drives, one for storage and one for parity. Which is currently no better than a simple main and backup but can scale easily.
 
 ### Add a cache drive
-Adding an SSD as a cache drive will speed up writes for the array, aswell as reads for shares stored only on cache.
+Adding an SSD as a cache drive will speed up writes for the array, as well as reads for shares stored only on cache.
 
 
 ---
