@@ -2,7 +2,7 @@
 title: WikiJS
 description: Reminders for how to format the markdown
 published: 1
-date: 2021-06-20T23:49:51.150Z
+date: 2021-06-20T23:50:41.490Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-20T23:40:46.623Z
@@ -45,7 +45,7 @@ This text is *Italic*.
 
 This text has a ~~Strikethrough~~.
 
->\~\~Strikethrough~~
+>This text has a \~\~Strikethrough~~
 
 This text is~Subscript~.
 
