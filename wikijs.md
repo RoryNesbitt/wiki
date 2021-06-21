@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:23:34.967Z
+date: 2021-06-21T18:23:53.206Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -183,8 +183,6 @@ code
 ### Code
 
 > --- produces a line
-
-<!--Section on tables-->
 
 ## Blockquotes
 
