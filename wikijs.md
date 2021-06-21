@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:22:31.302Z
+date: 2021-06-21T18:23:34.967Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -184,22 +184,72 @@ code
 
 > --- produces a line
 
-## Tables
+<!--Section on tables-->
 
-## Tab {.tabset}
+## Blockquotes
+
+## Tabs {.tabset}
 
 ### Example
 
-| Tables        | Are           |   created |
-| ------------- | :-----------: | --------: |
-| with pipes    | to seperate   |   columns |
-| hyphens       | after the     | title row |
-| And colons    | to determine  | alignment |
+> This is a  
+blockquote
+
+> It is made with  
+a <kbd>></kbd> before the first line
+
+> It can become an info blockquote with `{.is-info}`
+{.is-info}
+
+> a success blockquote with `{.is-success}`
+{.is-success}
+
+> a warning blockquote with `{.is-warning}`
+{.is-warning}
+
+> or an error blockquote with `{.is-danger}`
+{.is-danger}
 
 ### Code
 
-| Tables        | Are          |   created |  
-| ------------- \| :-----------: | --------: |  <!--FIXME: Stop this showing as emoji's on the wiki-->
-| with pipes    | to seperate   |   columns |  
-| hyphens       | after the     | title row |  
-| And colons    | to determine  | alignment |
+\> This is a  
+blockquote
+
+\> It is made with  
+a <kbd>></kbd> before the first line
+
+\> It can become an info blockquote with `{.is-info}`  
+{.is-info}
+
+\> a success blockquote with `{.is-success}`  
+{.is-success}
+
+\> a warning blockquote with `{.is-warning}`  
+{.is-warning}
+
+\> or an error blockquote with `{.is-danger}`  
+{.is-danger}
+
+## Content Tabs
+
+## Tabs {.tabset}
+
+### Example
+
+Each of these example/code sections is a content tab
+
+### code
+
+\## Content Tabs
+
+\## Tabs {.tabset}
+
+\### Example
+
+Each of these example/code sections is a content tab
+
+\### code
+
+> The `Tabs {.tabset}` header will not show  
+Header size can vary but tab titles must be one size smaller than `Tabs {.tabset}`
+{.is-info}
