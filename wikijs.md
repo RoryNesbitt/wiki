@@ -118,7 +118,7 @@ code
 
 <!-- Single blank line here will screw with the WikiJS
      edittor but will appear as normal once saved-->
- 
+
 >| Tables        | Are          |   created |  
 | ------------- \| :-----------: | --------: |  
 | with pipes    | to seperate   |   columns |  
