@@ -2,7 +2,7 @@
 title: WikiJS
 description: Reminders for how to format the markdown
 published: 1
-date: 2021-06-21T00:28:43.154Z
+date: 2021-06-21T09:49:55.117Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-20T23:40:46.623Z
@@ -117,7 +117,7 @@ code
 | And colons    | to determine  | alignment |
 
 >| Tables        | Are          |   created |  
-| ------------- \|:-------------:| ---------:|  
+| ------------- \|:-------------:\| ---------:\|  
 | with pipes    | to seperate   |   columns |  
 | hyphens       | after the     | title row |  
 | And colons    | to determine  | alignment |
