@@ -2,7 +2,7 @@
 title: WikiJS
 description: Reminders for how to format the markdown
 published: 1
-date: 2021-06-21T00:24:02.156Z
+date: 2021-06-21T00:25:03.429Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-20T23:40:46.623Z
@@ -38,6 +38,7 @@ or can insert an image with ![rnd.png](/rnd.png "Logo" =x50)
 > \!\[Image title](/path/to/image "Alt text" =100x50).
 
 > You can include only one sides sizing to maintain aspect ratio, e.g. `100x` or `x50`
+Or use HTMLs `<img>` tag for complete control
 {.is-info}
 
 
