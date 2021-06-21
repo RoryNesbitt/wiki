@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:19:02.588Z
+date: 2021-06-21T18:19:55.881Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -141,3 +141,65 @@ This text is ^Superscript^.
 `1.` and  
 ...`1.` three  
 ......`1.` spaces
+
+## Code and keys
+
+## Tab {.tabset}
+
+### Inline code
+
+Line containing `some code` within.
+
+> Line containing \`some code\` within.
+
+### Keys
+
+Line containing shortcut such as <kbd>CTLR</kbd> <kbd>ALT</kbd> <kbd>DEL</kbd>.
+
+>Line containing shortcut such as \<kbd>CTLR\</kbd> \<kbd>ALT\</kbd> \<kbd>DEL\</kbd>.
+
+### Code blocks
+
+```txt
+Block  
+of  
+code
+```
+
+>\```txt  
+Block  
+of  
+code  
+\```
+
+## lines
+
+## Tab {.tabset}
+
+### Example
+
+---
+
+### Code
+
+> --- produces a line
+
+## Tables
+
+## Tab {.tabset}
+
+### Example
+
+| Tables        | Are           |   created |
+| ------------- | :-----------: | --------: |
+| with pipes    | to seperate   |   columns |
+| hyphens       | after the     | title row |
+| And colons    | to determine  | alignment |
+
+### Code
+
+| Tables        | Are          |   created |  
+| ------------- \| :-----------: | --------: |  <!--FIXME: Stop this showing as emoji's on the wiki-->
+| with pipes    | to seperate   |   columns |  
+| hyphens       | after the     | title row |  
+| And colons    | to determine  | alignment |
