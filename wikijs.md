@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:21:59.550Z
+date: 2021-06-21T18:22:31.302Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -183,3 +183,23 @@ code
 ### Code
 
 > --- produces a line
+
+## Tables
+
+## Tab {.tabset}
+
+### Example
+
+| Tables        | Are           |   created |
+| ------------- | :-----------: | --------: |
+| with pipes    | to seperate   |   columns |
+| hyphens       | after the     | title row |
+| And colons    | to determine  | alignment |
+
+### Code
+
+| Tables        | Are          |   created |  
+| ------------- \| :-----------: | --------: |  <!--FIXME: Stop this showing as emoji's on the wiki-->
+| with pipes    | to seperate   |   columns |  
+| hyphens       | after the     | title row |  
+| And colons    | to determine  | alignment |
