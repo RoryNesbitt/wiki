@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:48:23.423Z
+date: 2021-06-21T18:51:13.241Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -18,12 +18,14 @@ Headers Range in size with 1 being the biggest down to 6
 
 ### code
 
-\# Header 1  
-\## Header 2  
-\### Header 3  
-\#### Header 4  
-\##### Header 5  
-\###### Header 6
+```
+# Header 1  
+## Header 2  
+### Header 3  
+#### Header 4  
+##### Header 5  
+###### Header 6
+```
 
 ## Links
 
