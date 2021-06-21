@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:51:13.241Z
+date: 2021-06-21T18:56:50.073Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -42,9 +42,9 @@ Links can be [anywhere](/wikijs "This ironically goes nowhere") in the text
 
 ### Code
 
-Links can be `[anywhere](/path/to/page "Description")`.
-
 ```txt
+Links can be [anywhere](/path/to/page "Description").
+
 - [Links can be formatted *as a list of blocks*](/wikijs "Alt text")
 - [- by adding <kbd>-</kbd> to each line *and `{.links-list}` at the end*](/wikijs "Alt text")
 - [And including the description *[surrounded by \*asterix\*]*](/wikijs "Alt text")
@@ -61,7 +61,9 @@ You can insert an image like a link ![rnd](/rnd.png "Logo" =x50)
 
 ### Code
 
-You can insert an image like a link `![Image title](/path/to/image "Alt text" =100x50)`.
+```
+You can insert an image like a link ![Image title](/path/to/image "Alt text" =100x50).
+```
 
 > You can include only one sides sizing to maintain aspect ratio, e.g. `100x` or `x50`, use a percentage of the availible area or use HTMLs `<img>` tag for complete control
 {.is-info}
@@ -108,12 +110,14 @@ This text is ^Superscript^.
   - indented
     - items
 
-> \- Use  
-\- a  
-\- hyphen  
-\- and  
-..\- two  
-....\- spaces
+```
+- Unordered
+- list
+- items
+- with
+  - indented
+    - items
+```
 
 ### Ordered
 
@@ -124,12 +128,14 @@ This text is ^Superscript^.
    1. indented
       1. items
 
-> `1.` Use  
+```
+`1.` Use  
 `1.` just  
 `1.` '1.'  
 `1.` and  
-...`1.` three  
-......`1.` spaces
+   `1.` three  
+      `1.` spaces
+```
 
 ## Code and keys
 
@@ -176,10 +182,11 @@ In between text
 
 ### Code
 
+```
 Here is a line
-
-\___
+___
 In between text
+```
 
 ## Tables
 
@@ -195,11 +202,13 @@ In between text
 
 ### Code
 
-| Tables        | Are          |   created |  
-| ------------- \| :-----------: | --------: |
+```
+| Tables        | Are           |   created |  
+| ------------- | :-----------: | --------: |
 | with pipes    | to seperate   |   columns |  
 | hyphens       | after the     | title row |  
 | And colons    | to determine  | alignment |
+```
 
 ## Blockquotes
 
@@ -227,23 +236,25 @@ a <kbd>></kbd> before the first line
 
 ### Code
 
-\> This is a  
+```
+> This is a  
 blockquote
 
-\> It is made with  
-a <kbd>></kbd> before the first line
+> It is made with  
+a > before the first line
 
-\> It can become an info blockquote with `{.is-info}`  
-`{.is-info}`
+> It can become an info blockquote with `{.is-info}`  
+{.is-info}
 
-\> a success blockquote with `{.is-success}`  
-`{.is-success}`
+> a success blockquote with `{.is-success}`  
+{.is-success}
 
-\> a warning blockquote with `{.is-warning}`  
-`{.is-warning}`
+> a warning blockquote with `{.is-warning}`  
+{.is-warning}
 
-\> or an error blockquote with `{.is-danger}`  
-`{.is-danger}`
+> or an error blockquote with `{.is-danger}`  
+{.is-danger}
+```
 
 ## Content Tabs
 
@@ -255,15 +266,17 @@ Each of these example/code sections is a content tab
 
 ### code
 
-\## Content Tabs
+```
+## Content Tabs
 
-\## Tabs `{.tabset}`
+## Tabs {.tabset}
 
-\### Example
+### Example
 
 Each of these example/code sections is a content tab
 
-\### code
+### code
+```
 
 > The `Tabs {.tabset}` header will not show  
 Header size can vary but tab titles must be one size smaller than `Tabs {.tabset}`
