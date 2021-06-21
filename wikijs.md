@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:17:13.057Z
+date: 2021-06-21T18:17:33.366Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -76,3 +76,32 @@ You can insert an image like a link \!\[Image title](/path/to/image "Alt text" =
 > You can include only one sides sizing to maintain aspect ratio, e.g. `100x` or `x50`  
 Or use HTMLs `<img>` tag for complete control
 {.is-info}
+
+## Text Styling
+
+## Tab {.tabset}
+
+### Bold
+
+This text is **Bold**.
+> This text is \*\*Bold**.
+
+### Italic
+
+This text is *Italic*.
+> This text is \*Italic*.
+
+### Strikethrough
+
+This text has a ~~Strikethrough~~.
+> This text has a \~\~Strikethrough~~.
+
+### Subscript
+
+This text is~Subscript~.
+> This text is\~Subscript~.
+
+### Superscript
+
+This text is ^Superscript^.
+> This text is\^Superscript^.
