@@ -247,3 +247,27 @@ a <kbd>></kbd> before the first line
 
 \> or an error blockquote with `{.is-danger}`  
 {.is-danger}
+
+## Content Tabs
+
+## Tabs {.tabset}
+
+### Example
+
+Each of these example/code sections is a content tab
+
+### code
+
+\## Content Tabs
+
+\## Tabs {.tabset}
+
+\### Example
+
+Each of these example/code sections is a content tab
+
+\### code
+
+> The `Tabs {.tabset}` header will not show  
+Header size can vary but tab titles must be one size smaller than `Tabs {.tabset}`
+{.is-info}
