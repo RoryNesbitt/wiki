@@ -120,7 +120,7 @@ code
      edittor but will appear as normal once saved-->
 
 >| Tables        | Are          |   created |  
-| ------------- \| :-----------: | --------: |  
+| ------------- \| :-----------: | --------: |  <!--FIXME: Stop this showing as emoji's on the wiki-->
 | with pipes    | to seperate   |   columns |  
 | hyphens       | after the     | title row |  
 | And colons    | to determine  | alignment |
