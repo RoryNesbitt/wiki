@@ -2,7 +2,7 @@
 title: test
 description: Just for messing with wiki.js formatting
 published: 1
-date: 2021-06-21T16:54:38.701Z
+date: 2021-06-21T16:55:11.921Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-21T16:36:07.511Z
@@ -47,7 +47,7 @@ Headers shown bellow
 
 ### code
 
-> \# Header 1  
+\# Header 1  
 \## Header 2  
 \### Header 3  
 \#### Header 4  
