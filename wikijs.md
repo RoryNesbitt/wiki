@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:17:33.366Z
+date: 2021-06-21T18:18:18.195Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -105,3 +105,39 @@ This text is~Subscript~.
 
 This text is ^Superscript^.
 > This text is\^Superscript^.
+
+## Lists
+
+## Tab {.tabset}
+
+### Unordered
+
+- Unordered
+- list
+- items
+- with
+  - indented
+    - items
+
+> \- Use  
+\- a  
+\- hyphen  
+\- and  
+..\- two  
+....\- spaces
+
+### Ordered
+
+1. Ordered
+1. list
+1. items
+   1. with
+   1. indented
+      1. items
+
+> `1.` Use  
+`1.` just  
+`1.` '1.'  
+`1.` and  
+...`1.` three  
+......`1.` spaces
