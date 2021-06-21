@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:27:51.244Z
+date: 2021-06-21T18:46:04.370Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -14,7 +14,7 @@ dateCreated: 2021-06-21T18:00:17.506Z
 
 ### Example
 
-Headers shown bellow
+Headers Range in size with 1 being the biggest down to 6
 
 ### code
 
@@ -24,18 +24,6 @@ Headers shown bellow
 \#### Header 4  
 \##### Header 5  
 \###### Header 6
-
-# Header 1
-
-## Header 2
-
-### Header 3
-
-#### Header 4
-
-##### Header 5
-
-###### Header 6
 
 ## Links
 
@@ -52,7 +40,7 @@ Links can be [anywhere](/wikijs "This ironically goes nowhere") in the text
 
 ### Code
 
-Links can be \[anywhere](/path/to/page "Description").
+Links can be `[anywhere](/path/to/page "Description")`.
 
 ```md
 - [Links can be formatted *as a list of blocks*](/wikijs "Alt text")
@@ -71,7 +59,7 @@ You can insert an image like a link ![rnd](/rnd.png "Logo" =x50)
 
 ### Code
 
-You can insert an image like a link \!\[Image title](/path/to/image "Alt text" =100x50).
+You can insert an image like a link `![Image title](/path/to/image "Alt text" =100x50)`.
 
 > You can include only one sides sizing to maintain aspect ratio, e.g. `100x` or `x50`  
 Or use HTMLs `<img>` tag for complete control
@@ -154,9 +142,9 @@ Line containing `some code` within.
 
 ### Keys
 
-Line containing shortcut such as <kbd>CTLR</kbd> <kbd>ALT</kbd> <kbd>DEL</kbd>.
+Line containing shortcut such as <kbd>CTLR</kbd>, <kbd>ALT</kbd> + <kbd>DEL</kbd>.
 
->Line containing shortcut such as \<kbd>CTLR\</kbd> \<kbd>ALT\</kbd> \<kbd>DEL\</kbd>.
+>Line containing shortcut such as \<kbd>CTLR\</kbd>, \<kbd>ALT\</kbd> + \<kbd>DEL\</kbd>.
 
 ### Code blocks
 
@@ -172,17 +160,25 @@ of
 code  
 \```
 
+> Note the txt affter the first ``` indicates the formatting that the code should be displayed with.
+{.is-info}
+
 ## lines
 
 ## Tab {.tabset}
 
 ### Example
 
----
+Here is a line
+___
+In between text
 
 ### Code
 
-> --- produces a line
+Here is a line
+
+\___
+In between text
 
 ## Tables
 
@@ -237,16 +233,16 @@ blockquote
 a <kbd>></kbd> before the first line
 
 \> It can become an info blockquote with `{.is-info}`  
-{.is-info}
+`{.is-info}`
 
 \> a success blockquote with `{.is-success}`  
-{.is-success}
+`{.is-success}`
 
 \> a warning blockquote with `{.is-warning}`  
-{.is-warning}
+`{.is-warning}`
 
 \> or an error blockquote with `{.is-danger}`  
-{.is-danger}
+`{.is-danger}`
 
 ## Content Tabs
 
@@ -260,7 +256,7 @@ Each of these example/code sections is a content tab
 
 \## Content Tabs
 
-\## Tabs {.tabset}
+\## Tabs `{.tabset}`
 
 \### Example
 
