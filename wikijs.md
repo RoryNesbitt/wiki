@@ -2,7 +2,7 @@
 title: WikiJS
 description: Reminders for how to format the markdown
 published: 1
-date: 2021-06-20T23:52:21.336Z
+date: 2021-06-21T00:10:37.630Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-20T23:40:46.623Z
@@ -29,9 +29,19 @@ dateCreated: 2021-06-20T23:40:46.623Z
 > `##### H5`
 > `###### H6`
 
-## Links
+## Links and images
 
-[]()
+Links can be [anywhere](# "This ironically goes nowhere") in the text with 
+> \[Link text](/path/to/page "Description").
+
+or can insert an image with 
+> \!\[Image title](/path/to/image "Alt text").
+
+- [Links can be formatted](# "Alt text")  
+- [as a list of blocks](# "Alt text")
+- [- by adding <kbd>-</kbd> to each line](# "Alt text")  
+- [and `{.links-list}` at the end](# "Alt text")
+{.links-list}
 
 ## Text Styling
 
