@@ -22,6 +22,10 @@ In order to create that VM in the first place `virtualisation` has to be enabled
 It is a good idea at this point to turn on `Wake-on-LAN` if the motherboard supports it
 Save these settings and reboot.
 
+> At this point the server can be accessed remotely by putting either <http://tower.local> or the servers IP address in to a browser.  
+Replace tower with the servers name if you modified it during USB creation.
+{.is-info}
+
 ### License
 
 Select use trial key. A full license can be purchased through the unraid gui at a later point. This will give you 30 days however this can be increased to 60 by requesting an extension during this time.
@@ -47,12 +51,15 @@ Adding an SSD as a cache drive will speed up writes for the array, as well as re
 
 ---
 
-## settings stuff idk
+## Settings
+
+> It is a good idea to add a password to root before doing anything further. Do this via the users tab at the top of the page.
+{.is-danger}
 
 ### Shares
 
-Shares are the main method of storing data on unraid.
-
-### Docker
+Shares are the main method of storing data on unraid. By default this will contain `appdata`, `domains`, `isos`, and `system`. the important column here is cache as it will tell you how each share is stored.
 
 ### Community Applications
+
+### Docker
