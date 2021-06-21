@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:56:50.073Z
+date: 2021-06-21T19:00:02.584Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -263,6 +263,16 @@ a > before the first line
 ### Example
 
 Each of these example/code sections is a content tab
+
+#### Content Tabs
+
+#### Tabs {.tabset}
+
+##### Example
+
+Each of these example/code sections is a content tab
+
+##### code
 
 ### code
 
