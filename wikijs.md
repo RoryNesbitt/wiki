@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:46:04.370Z
+date: 2021-06-21T18:47:33.992Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -42,7 +42,7 @@ Links can be [anywhere](/wikijs "This ironically goes nowhere") in the text
 
 Links can be `[anywhere](/path/to/page "Description")`.
 
-```md
+```txt
 - [Links can be formatted *as a list of blocks*](/wikijs "Alt text")
 - [- by adding <kbd>-</kbd> to each line *and `{.links-list}` at the end*](/wikijs "Alt text")
 - [And including the description *[surrounded by \*asterix\*]*](/wikijs "Alt text")
