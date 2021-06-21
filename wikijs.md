@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T19:02:39.367Z
+date: 2021-06-21T19:03:32.446Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -284,6 +284,10 @@ They can be nested, but it's not a great idea.
 Each of these example/code sections is a content tab
 
 ### code
+
+\```
+Code goes here
+\```
 ```
 
 > The `Tabs {.tabset}` header will not show  
