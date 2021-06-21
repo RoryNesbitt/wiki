@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T20:03:06.735Z
+date: 2021-06-21T20:07:11.434Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -75,27 +75,37 @@ You can insert an image like a link ![Image title](/path/to/image "Alt text" =10
 ### Bold
 
 This text is **Bold**.
-> This text is \*\*Bold**.
+```
+This text is **Bold**.
+```
 
 ### Italic
 
 This text is *Italic*.
-> This text is \*Italic*.
+```
+This text is *Italic*.
+```
 
 ### Strikethrough
 
 This text has a ~~Strikethrough~~.
-> This text has a \~\~Strikethrough~~.
+```
+This text has a ~~Strikethrough~~.
+```
 
 ### Subscript
 
 This text is~Subscript~.
-> This text is\~Subscript~.
+```
+This text is~Subscript~.
+```
 
 ### Superscript
 
 This text is ^Superscript^.
-> This text is\^Superscript^.
+```
+This text is^Superscript^.
+```
 
 ## Lists
 
@@ -153,6 +163,9 @@ This text is ^Superscript^.
 - [x] ToDos
 ```
 
+> Task lists are not native to Markdown but will work on both Wiki.js and Github
+{.is-info}
+
 ## Code and keys
 
 ## Tab {.tabset}
@@ -189,7 +202,7 @@ code
 ```
 ````
 
-> Note the txt affter the first <kbd>```</kbd> indicates the formatting that the code should be displayed with.
+> The txt after the first <kbd>```</kbd> indicates the formatting that the code should be displayed with.
 {.is-info}
 
 ## lines
