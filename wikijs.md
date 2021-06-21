@@ -2,13 +2,13 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:24:39.568Z
+date: 2021-06-21T18:27:51.244Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
 ---
 
-# Headers
+## Headers
 
 ## Tab {.tabset}
 
