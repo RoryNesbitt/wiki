@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:16:22.771Z
+date: 2021-06-21T18:17:13.057Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -60,3 +60,19 @@ Links can be \[anywhere](/path/to/page "Description").
 - [And including the description *[surrounded by \*asterix\*]*](/wikijs "Alt text")
 {.links-list}
 ```
+
+## Images
+
+## Tab {.tabset}
+
+### Example
+
+You can insert an image like a link ![rnd](/rnd.png "Logo" =x50)
+
+### Code
+
+You can insert an image like a link \!\[Image title](/path/to/image "Alt text" =100x50).
+
+> You can include only one sides sizing to maintain aspect ratio, e.g. `100x` or `x50`  
+Or use HTMLs `<img>` tag for complete control
+{.is-info}
