@@ -2,7 +2,7 @@
 title: WikiJS
 description: Reminders for how to format the markdown
 published: 1
-date: 2021-06-21T00:10:37.630Z
+date: 2021-06-21T00:24:02.156Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-20T23:40:46.623Z
@@ -34,8 +34,12 @@ dateCreated: 2021-06-20T23:40:46.623Z
 Links can be [anywhere](# "This ironically goes nowhere") in the text with 
 > \[Link text](/path/to/page "Description").
 
-or can insert an image with 
-> \!\[Image title](/path/to/image "Alt text").
+or can insert an image with ![rnd.png](/rnd.png "Logo" =x50)
+> \!\[Image title](/path/to/image "Alt text" =100x50).
+
+> You can include only one sides sizing to maintain aspect ratio, e.g. `100x` or `x50`
+{.is-info}
+
 
 - [Links can be formatted](# "Alt text")  
 - [as a list of blocks](# "Alt text")
@@ -112,6 +116,21 @@ code
 ---
 
 > --- produces a line
+
+## Tables
+
+| Tables        | Are           |   created |
+| ------------- |:-------------:| ---------:|
+| with pipes    | to seperate   |   columns |
+| hyphens       | after the     | title row |
+| And colons    | to determine  | alignment |
+
+
+>| Tables        | Are          |   created |
+| ------------- \|:-------------:| ---------:|
+| with pipes    | to seperate   |   columns |
+| hyphens       | after the     | title row |
+| And colons    | to determine  | alignment |
 
 ## Blockquotes
 
