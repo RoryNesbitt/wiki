@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T19:35:11.135Z
+date: 2021-06-21T20:03:06.735Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
