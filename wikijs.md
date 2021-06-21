@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:47:33.992Z
+date: 2021-06-21T18:48:23.423Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -61,8 +61,7 @@ You can insert an image like a link ![rnd](/rnd.png "Logo" =x50)
 
 You can insert an image like a link `![Image title](/path/to/image "Alt text" =100x50)`.
 
-> You can include only one sides sizing to maintain aspect ratio, e.g. `100x` or `x50`  
-Or use HTMLs `<img>` tag for complete control
+> You can include only one sides sizing to maintain aspect ratio, e.g. `100x` or `x50`, use a percentage of the availible area or use HTMLs `<img>` tag for complete control
 {.is-info}
 
 ## Text Styling
