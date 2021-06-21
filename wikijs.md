@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T18:15:59.479Z
+date: 2021-06-21T18:16:22.771Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -36,3 +36,27 @@ Headers shown bellow
 ##### Header 5
 
 ###### Header 6
+
+## Links
+
+## Tab {.tabset}
+
+### Example
+
+Links can be [anywhere](/wikijs "This ironically goes nowhere") in the text
+
+- [Links can be formatted *as a list of blocks*](/wikijs "Alt text")
+- [- by adding <kbd>-</kbd> to each line *and `{.links-list}` at the end*](/wikijs "Alt text")
+- [And including the description *[surrounded by \*asterix\*]*](/wikijs "Alt text")
+{.links-list}
+
+### Code
+
+Links can be \[anywhere](/path/to/page "Description").
+
+```md
+- [Links can be formatted *as a list of blocks*](/wikijs "Alt text")
+- [- by adding <kbd>-</kbd> to each line *and `{.links-list}` at the end*](/wikijs "Alt text")
+- [And including the description *[surrounded by \*asterix\*]*](/wikijs "Alt text")
+{.links-list}
+```
