@@ -2,7 +2,7 @@
 title: Wiki.js
 description: Cheatsheet for the formatting
 published: 1
-date: 2021-06-21T19:04:15.702Z
+date: 2021-06-21T19:35:11.135Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-21T18:00:17.506Z
@@ -137,6 +137,22 @@ This text is ^Superscript^.
       `1.` spaces
 ```
 
+### Tasks
+
+- [ ] Task
+- [ ] lists
+  - [ ] are
+    - [x] like
+- [x] ToDos
+
+```
+- [ ] Task
+- [ ] lists
+  - [ ] are
+    - [x] like
+- [x] ToDos
+```
+
 ## Code and keys
 
 ## Tab {.tabset}
@@ -145,13 +161,17 @@ This text is ^Superscript^.
 
 Line containing `some code` within.
 
-> Line containing \`some code\` within.
+```
+Line containing \`some code\` within.
+```
 
 ### Keys
 
 Line containing shortcut such as <kbd>CTLR</kbd>, <kbd>ALT</kbd> + <kbd>DEL</kbd>.
 
->Line containing shortcut such as \<kbd>CTLR\</kbd>, \<kbd>ALT\</kbd> + \<kbd>DEL\</kbd>.
+```
+Line containing shortcut such as <kbd>CTLR</kbd>, <kbd>ALT</kbd> + <kbd>DEL</kbd>.
+```
 
 ### Code blocks
 
@@ -161,13 +181,15 @@ of
 code
 ```
 
->\```txt  
+````
+```txt  
 Block  
 of  
 code  
-\```
+```
+````
 
-> Note the txt affter the first ``` indicates the formatting that the code should be displayed with.
+> Note the txt affter the first <kbd>```</kbd> indicates the formatting that the code should be displayed with.
 {.is-info}
 
 ## lines
@@ -274,7 +296,7 @@ They can be nested, but it's not a great idea.
 
 ### code
 
-```
+````
 ## Content Tabs
 
 ## Tabs {.tabset}
@@ -284,10 +306,59 @@ They can be nested, but it's not a great idea.
 Each of these example/code sections is a content tab
 
 ### code
-
+```
 Code goes here
 ```
+````
 
 > The `Tabs {.tabset}` header will not show  
 Header size can vary but tab titles must be one size smaller than `Tabs {.tabset}`
 {.is-info}
+
+## Diagrams
+
+## Tabs {.tabset}
+
+### Mermaid
+
+```mermaid
+sequenceDiagram
+    Alice ->> Bob: Hello Bob, how are you?
+    Bob-->>John: How about you John?
+    Bob--x Alice: I am good thanks!
+    Bob-x John: I am good thanks!
+    Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+
+    Bob-->Alice: Checking with John...
+    Alice->John: Yes... John, how are you?
+```
+
+### Mermaid Code
+
+````
+```mermaid
+sequenceDiagram
+    Alice ->> Bob: Hello Bob, how are you?
+    Bob-->>John: How about you John?
+    Bob--x Alice: I am good thanks!
+    Bob-x John: I am good thanks!
+    Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+
+    Bob-->Alice: Checking with John...
+    Alice->John: Yes... John, how are you?
+```
+````
+
+### Plantuml
+
+```plantuml
+Bob->Alice : hello
+```
+
+### Plantuml Code
+
+````
+```plantuml
+Bob->Alice : hello
+```
+````
