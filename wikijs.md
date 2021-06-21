@@ -2,7 +2,7 @@
 title: WikiJS
 description: Reminders for how to format the markdown
 published: 1
-date: 2021-06-21T00:25:03.429Z
+date: 2021-06-21T00:28:43.154Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-20T23:40:46.623Z
@@ -42,10 +42,9 @@ Or use HTMLs `<img>` tag for complete control
 {.is-info}
 
 
-- [Links can be formatted](# "Alt text")  
-- [as a list of blocks](# "Alt text")
-- [- by adding <kbd>-</kbd> to each line](# "Alt text")  
-- [and `{.links-list}` at the end](# "Alt text")
+- [Links can be formatted *as a list of blocks*](# "Alt text")
+- [- by adding <kbd>-</kbd> to each line *and `{.links-list}` at the end*](# "Alt text")
+- [And including the description *[surrounded by \*asterix\*]*](# "Alt text")
 {.links-list}
 
 ## Text Styling
