@@ -18,7 +18,7 @@ Headers Range in size with 1 being the biggest down to 6
 
 ### code
 
-```
+```md
 # Header 1  
 ## Header 2  
 ### Header 3  
@@ -61,7 +61,7 @@ You can insert an image like a link ![rnd](/rnd.png "Logo" =x50)
 
 ### Code
 
-```
+```txt
 You can insert an image like a link ![Image title](/path/to/image "Alt text" =100x50).
 ```
 
@@ -75,35 +75,40 @@ You can insert an image like a link ![Image title](/path/to/image "Alt text" =10
 ### Bold
 
 This text is **Bold**.
-```
+
+```txt
 This text is **Bold**.
 ```
 
 ### Italic
 
 This text is *Italic*.
-```
+
+```txt
 This text is *Italic*.
 ```
 
 ### Strikethrough
 
 This text has a ~~Strikethrough~~.
-```
+
+```txt
 This text has a ~~Strikethrough~~.
 ```
 
 ### Subscript
 
 This text is~Subscript~.
-```
+
+```txt
 This text is~Subscript~.
 ```
 
 ### Superscript
 
 This text is ^Superscript^.
-```
+
+```txt
 This text is^Superscript^.
 ```
 
@@ -120,7 +125,7 @@ This text is^Superscript^.
   - indented
     - items
 
-```
+```txt
 - Unordered
 - list
 - items
@@ -138,7 +143,7 @@ This text is^Superscript^.
    1. indented
       1. items
 
-```
+```txt
 `1.` Use  
 `1.` just  
 `1.` '1.'  
@@ -155,7 +160,7 @@ This text is^Superscript^.
     - [x] like
 - [x] ToDos
 
-```
+```txt
 - [ ] Task
 - [ ] lists
   - [ ] are
@@ -174,15 +179,15 @@ This text is^Superscript^.
 
 Line containing `some code` within.
 
-```
-Line containing \`some code\` within.
+```txt
+Line containing `some code` within.
 ```
 
 ### Keys
 
 Line containing shortcut such as <kbd>CTLR</kbd>, <kbd>ALT</kbd> + <kbd>DEL</kbd>.
 
-```
+```txt
 Line containing shortcut such as <kbd>CTLR</kbd>, <kbd>ALT</kbd> + <kbd>DEL</kbd>.
 ```
 
@@ -194,7 +199,7 @@ of
 code
 ```
 
-````
+````txt
 ```txt  
 Block  
 of  
@@ -217,7 +222,7 @@ In between text
 
 ### Code
 
-```
+```txt
 Here is a line
 ___
 In between text
@@ -237,7 +242,7 @@ In between text
 
 ### Code
 
-```
+```txt
 | Tables        | Are           |   created |  
 | ------------- | :-----------: | --------: |
 | with pipes    | to seperate   |   columns |  
@@ -271,7 +276,7 @@ a <kbd>></kbd> before the first line
 
 ### Code
 
-```
+```txt
 > This is a  
 blockquote
 
@@ -309,7 +314,7 @@ They can be nested, but it's not a great idea.
 
 ### code
 
-````
+````txt
 ## Content Tabs
 
 ## Tabs {.tabset}
@@ -348,7 +353,7 @@ sequenceDiagram
 
 ### Mermaid Code
 
-````
+````txt
 ```mermaid
 sequenceDiagram
     Alice ->> Bob: Hello Bob, how are you?
@@ -370,7 +375,7 @@ Bob->Alice : hello
 
 ### Plantuml Code
 
-````
+````txt
 ```plantuml
 Bob->Alice : hello
 ```
