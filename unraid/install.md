@@ -17,9 +17,9 @@ Choose the latest version and select the USB drive then start writing.
 
 ### Bios
 
-The bios has to be changed to `boot from USB` before anything else. Particularly if you plan to directly pass an SSD through to a VM as this could be booted from before the USB.
-In order to create that VM in the first place `virtualisation` has to be enabled in the BIOS too.
-It is a good idea at this point to turn on `Wake-on-LAN` if the motherboard supports it
+The bios has to be changed to **boot from USB** before anything else. Particularly if you plan to directly pass an SSD through to a VM as this could be booted from before the USB.
+In order to create that VM in the first place **virtualisation** has to be enabled in the BIOS too.
+It is a good idea at this point to turn on **Wake-on-LAN** if the motherboard supports it
 Save these settings and reboot.
 
 > At this point the server can be accessed remotely by putting either <http://tower.local> or the servers IP address in to a browser.  
@@ -47,7 +47,9 @@ I have two 1TB drives, one for storage and one for parity. Which is currently no
 
 ### Add a cache drive
 
-Adding an SSD as a cache drive will speed up writes for the array, as well as reads for shares stored only on cache.
+Adding an SSD as a cache drive will speed up writes for the array, as well as reads for shares stored only on cache. Depending on how you plan to use a share it will sometimes be best to store it only on cache and other you should use the array.
+
+I have one 1TB SSD as my cache drive.
 
 ---
 
@@ -58,8 +60,35 @@ Adding an SSD as a cache drive will speed up writes for the array, as well as re
 
 ### Shares
 
-Shares are the main method of storing data on unraid. By default this will contain `appdata`, `domains`, `isos`, and `system`. the important column here is cache as it will tell you how each share is stored.
+Shares are the main method of storing data on unraid. By default this will contain **appdata**, **domains**, **isos**, and **system**. the important column here is cache as it will tell you how each share is stored.
+Each share also has export and security settings which determin if it is able to be remotely accessed and how easily/securely.
 
-### Community Applications
+## Tab {.tabset}
 
-### Docker
+### appdata
+
+You appdata share will be where you store all the persistent data for docker containers. This means storage and settings for all 'apps' in order for it to remain when teh container is restarted.
+
+> It is advised to set this share to cache only or cache prefer in order to speed up load times with containers. Although regular backups are a must as this means there is no parity protection.
+{.is-info}
+
+### domains
+
+Domains is the share that instances of virtual machines are stored in, it is like the appdata for VMs.
+
+> It is advised to set this share to cache only or cache prefer in order to speed up load times with containers. Although regular backups are a must as this means there is no parity protection.
+{.is-info}
+
+### isos
+
+The isos share is for storing .iso files etc that will be used for installing new VMs.
+
+> Isos has no need for the speed of the cache and therefore would benifit more from the parity protection provided by the array.
+{.is-info}
+
+### system
+
+The system share is for storing your docker.img and libvirt.img.
+
+> It is advised to set this share to cache only or cache prefer in order to speed up load times with containers. Although regular backups are a must as this means there is no parity protection.
+{.is-info}
