@@ -2,10 +2,10 @@
 title: Home
 description: Documentation for my servers
 published: 1
-date: 2021-06-20T20:24:42.595Z
+date: 2021-06-23T13:52:31.564Z
 tags: 
 editor: markdown
-dateCreated: 2021-06-18T21:03:58.476Z
+dateCreated: 2021-06-21T18:00:06.861Z
 ---
 
 <img src="/assets/general/rnd.png" style="width:100px;height:100px;float:right;">
