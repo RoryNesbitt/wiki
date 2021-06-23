@@ -1,11 +1,11 @@
 ---
-title: Unraid installation 
+title: Unraid installation
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-20T21:20:45.098Z
+date: 2021-06-23T19:03:10.235Z
 tags: server, unraid
 editor: markdown
-dateCreated: 2021-06-18T21:20:09.447Z
+dateCreated: 2021-06-21T18:00:20.665Z
 ---
 
 ## Preparation
@@ -92,3 +92,7 @@ The system share is for storing your docker.img and libvirt.img.
 
 > It is advised to set this share to cache only or cache prefer in order to speed up load times with containers. Although regular backups are a must as this means there is no parity protection.
 {.is-info}
+
+# Community applications
+
+Community applications should almost always be the first thing you do on an unraid server. Install instructions are on [plugins](/unraid/plugins).
