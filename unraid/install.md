@@ -2,7 +2,7 @@
 title: Unraid installation
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-23T21:35:29.354Z
+date: 2021-06-23T21:44:45.583Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-21T18:00:20.665Z
@@ -65,35 +65,41 @@ I have one 1TB SSD as my cache drive.
 Shares are the main method of storing data on unraid. By default this will contain **appdata**, **domains**, **isos**, and **system**. the important column here is cache as it will tell you how each share is stored.
 Each share also has export and security settings which determin if it is able to be remotely accessed and how easily/securely.
 
-# Tab {.tabset}
+## Tab {.tabset}
 
-## appdata
+### appdata
 
 You appdata share will be where you store all the persistent data for docker containers. This means storage and settings for all 'apps' in order for it to remain when teh container is restarted.
 
 > It is advised to set this share to cache only or cache prefer in order to speed up load times with containers. Although regular backups are a must as this means there is no parity protection.
 {.is-info}
 
-## domains
+### domains
 
 Domains is the share that instances of virtual machines are stored in, it is like the appdata for VMs.
 
 > It is advised to set this share to cache only or cache prefer in order to speed up load times with containers. Although regular backups are a must as this means there is no parity protection.
 {.is-info}
 
-## isos
+### isos
 
 The isos share is for storing .iso files etc that will be used for installing new VMs.
 
 > Isos has no need for the speed of the cache and therefore would benifit more from the parity protection provided by the array.
 {.is-info}
 
-## system
+### system
 
 The system share is for storing your docker.img and libvirt.img.
 
 > It is advised to set this share to cache only or cache prefer in order to speed up load times with containers. Although regular backups are a must as this means there is no parity protection.
 {.is-info}
+
+## Settings to add
+
+- [ ] Activate docker/VMs
+- [ ] Spin down disk
+
 
 # Community applications
 
