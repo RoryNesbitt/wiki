@@ -2,20 +2,20 @@
 title: Unraid installation
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-23T19:03:10.235Z
+date: 2021-06-23T19:04:32.632Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-21T18:00:20.665Z
 ---
 
-## Preparation
+# Preparation
 
-### USB
+## USB
 
 Firstly get the most up to date version of the [flash creation tool](https://unraid.net/download) and choose a high quality USB device to install on to. A USB 2.0 is recommended as the speed is not relevant and they seem to last longer than 3.0. I used a cisco branded USB, mostly as it has a flashing blue light when in use, which indicates when the server is writing to it. This doesn't happen often as unraid is loaded in to RAM.
 Choose the latest version and select the USB drive then start writing.
 
-### Bios
+## Bios
 
 The bios has to be changed to **boot from USB** before anything else. Particularly if you plan to directly pass an SSD through to a VM as this could be booted from before the USB.
 In order to create that VM in the first place **virtualisation** has to be enabled in the BIOS too.
@@ -26,15 +26,15 @@ Save these settings and reboot.
 Replace tower with the servers name if you modified it during USB creation.
 {.is-info}
 
-### License
+## License
 
 Select use trial key. A full license can be purchased through the unraid gui at a later point. This will give you 30 days however this can be increased to 60 by requesting an extension during this time.
 
 ---
 
-## Storage
+# Storage
 
-### Set up the array
+## Set up the array
 
 The Array is where the main storage for unraid is. I barely make use of this.
 An array pool can contain up to 30 drives, 28 storage and 2 parity. If using the unraid server as a NAS this gives a good number of benefits.
@@ -45,7 +45,7 @@ An array pool can contain up to 30 drives, 28 storage and 2 parity. If using the
 
 I have two 1TB drives, one for storage and one for parity. Which is currently no better than a simple main and backup but can scale easily.
 
-### Add a cache drive
+## Add a cache drive
 
 Adding an SSD as a cache drive will speed up writes for the array, as well as reads for shares stored only on cache. Depending on how you plan to use a share it will sometimes be best to store it only on cache and other you should use the array.
 
@@ -53,40 +53,40 @@ I have one 1TB SSD as my cache drive.
 
 ---
 
-## Settings
+# Settings
 
 > It is a good idea to add a password to root before doing anything further. Do this via the users tab at the top of the page.
 {.is-danger}
 
-### Shares
+## Shares
 
 Shares are the main method of storing data on unraid. By default this will contain **appdata**, **domains**, **isos**, and **system**. the important column here is cache as it will tell you how each share is stored.
 Each share also has export and security settings which determin if it is able to be remotely accessed and how easily/securely.
 
-## Tab {.tabset}
+# Tab {.tabset}
 
-### appdata
+## appdata
 
 You appdata share will be where you store all the persistent data for docker containers. This means storage and settings for all 'apps' in order for it to remain when teh container is restarted.
 
 > It is advised to set this share to cache only or cache prefer in order to speed up load times with containers. Although regular backups are a must as this means there is no parity protection.
 {.is-info}
 
-### domains
+## domains
 
 Domains is the share that instances of virtual machines are stored in, it is like the appdata for VMs.
 
 > It is advised to set this share to cache only or cache prefer in order to speed up load times with containers. Although regular backups are a must as this means there is no parity protection.
 {.is-info}
 
-### isos
+## isos
 
 The isos share is for storing .iso files etc that will be used for installing new VMs.
 
 > Isos has no need for the speed of the cache and therefore would benifit more from the parity protection provided by the array.
 {.is-info}
 
-### system
+## system
 
 The system share is for storing your docker.img and libvirt.img.
 
