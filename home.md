@@ -2,7 +2,7 @@
 title: Home
 description: Documentation for my servers
 published: 1
-date: 2021-06-23T13:52:31.564Z
+date: 2021-06-23T13:53:36.101Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-21T18:00:06.861Z
@@ -19,6 +19,7 @@ Documentation for my home automation services and IoT projects.
 
 - [Jackdaw *Main server*](/jackdaw)  
 - [Raspberry Pis *Docker & automation*](/rpi)
+- [Wiki.js *Cheatsheet for page formatting*](/wikijs)
 {.links-list}
 
 ---
