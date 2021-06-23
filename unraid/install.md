@@ -2,7 +2,7 @@
 title: Unraid installation
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-23T19:04:32.632Z
+date: 2021-06-23T21:32:23.174Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-21T18:00:20.665Z
@@ -10,12 +10,12 @@ dateCreated: 2021-06-21T18:00:20.665Z
 
 # Preparation
 
+<img src="/assets/general/usb-creator.png" style="height:300px;float:right;">
+
 ## USB
 
 Firstly get the most up to date version of the [flash creation tool](https://unraid.net/download) and choose a high quality USB device to install on to. A USB 2.0 is recommended as the speed is not relevant and they seem to last longer than 3.0. I used a cisco branded USB, mostly as it has a flashing blue light when in use, which indicates when the server is writing to it. This doesn't happen often as unraid is loaded in to RAM.
 Choose the latest version and select the USB drive then start writing.
-
-<img src="/assets/general/usb-creator.png" style="height:300px;float:right;">
 
 ## Bios
 
