@@ -8,13 +8,63 @@ editor: markdown
 dateCreated: 2021-06-23T15:04:59.432Z
 ---
 
-## Community Applications
+# Community Applications
 
-> Community applications is the appstore for unraid. it is the only plugin or container that you will ever need to manually install.
-{.is-info}
+# tab {.tabset}
+
+## Overview
+
+> Community applications is the appstore for unraid. it is the only plugin or container that you should ever need to manually install.
+{.is-warning}
+
+Installing plugins or docker containers on unraid is mainly done through the CA apps tab. Once installed this tab provides a searchable grid layout for availible addons. These are not managed by CA but rather any unraid user can request their repositories be added.  
+Community Applications was created by the user Squid. Squid has also created many other plugins and you would not go wrong selecting his repo and installing every one of them, although some of the most useful ones will be detailed bellow.
+
+## installation
 
 To add in CA to your server you go to the **plugins** tab, click on **Install plugin** and then copy this URL in to the text box shown:
 
 ```txt
 https://raw.githubusercontent.com/Squidly271/community.applications/master/plugins/community.applications.plg
 ```
+
+Click install and let this run, it should go quick, and then refresh the page to see the apps tab now availible.
+
+# Essential plugins
+
+# tab {.tabset}
+
+## Backup/Restore Appdata
+
+### Squid's Repository
+
+## SSD TRIM
+
+### Dynamix Repository
+
+## Fix Common Problems
+
+### Squid's Repository
+
+## My Servers
+
+### Official Unraid Repository
+
+## Nerdpack
+
+### dmacias' Repository
+
+## Preclear Disks
+
+### gfjardim's Repository
+
+> A docker container, binhex preclear, is also availible to do the same task. Binhex is a common name that will pop up when searching containers but I have never used this one so I can't recommend it over gfjardim's plugin.
+{.is-warning}
+
+## Unassigned Devices (Plus)
+
+### dlandon's Repository
+
+## User Scripts
+
+### Squid's Repository
