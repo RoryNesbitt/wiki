@@ -10,18 +10,18 @@ dateCreated: 2021-06-21T18:00:20.665Z
 
 # Preparation
 
-<img src="/assets/general/usb-creator.png" style="width:300px;float:right;">
+<img src="/assets/general/usb-creator.png" style="float:right;">
 
 ## USB
 
-Firstly get the most up to date version of the [flash creation tool](https://unraid.net/download) and choose a high quality USB device to install on to. A USB 2.0 is recommended as the speed is not relevant and they seem to last longer than 3.0. I used a cisco branded USB, mostly as it has a flashing blue light when in use, which indicates when the server is writing to it. This doesn't happen often as unraid is loaded in to RAM.
+Firstly get the most up to date version of the [flash creation tool](https://unraid.net/download) and choose a high quality USB device to install on to. A USB 2.0 is recommended as the speed is not relevant and they seem to bw more reliable than 3.0. I used a cisco branded USB, mostly as it has a flashing blue light when in use, which indicates when the server is writing to it. This doesn't happen often as unraid is loaded in to RAM on startup.
 Choose the latest version and select the USB drive then start writing.
 
 ## Bios
 
-The bios has to be changed to **boot from USB** before anything else. Particularly if you plan to directly pass an SSD through to a VM as this could be booted from before the USB.
-In order to create that VM in the first place **virtualisation** has to be enabled in the BIOS too.
-It is a good idea at this point to turn on **Wake-on-LAN** if the motherboard supports it
+The bios has to be changed to ***boot from USB*** before anything else. Particularly if you plan to directly pass an SSD through to a VM as this could be booted from before the USB.
+In order to create that VM in the first place ***virtualisation*** has to be enabled in the BIOS too.
+It is a good idea at this point to turn on ***Wake-on-LAN*** if the motherboard supports it
 Save these settings and reboot.
 
 > At this point the server can be accessed remotely by putting either <http://tower.local> or the servers IP address in to a browser.  
@@ -62,7 +62,7 @@ I have one 1TB SSD as my cache drive.
 
 ## Shares
 
-Shares are the main method of storing data on unraid. By default this will contain **appdata**, **domains**, **isos**, and **system**. the important column here is cache as it will tell you how each share is stored.
+Shares are the main method of storing data on unraid. By default this will contain ***appdata***, ***domains***, ***isos***, and ***system***. the important column here is cache as it will tell you how each share is stored.
 Each share also has export and security settings which determin if it is able to be remotely accessed and how easily/securely.
 
 ## Tab {.tabset}
