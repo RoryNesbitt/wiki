@@ -15,7 +15,7 @@ dateCreated: 2021-06-23T15:04:59.432Z
 ## Overview
 
 > Community applications is the appstore for unraid. it is the only plugin or container that you should ever need to manually install.
-{.is-warning}
+{.is-info}
 
 Installing plugins or docker containers on unraid is mainly done through the CA apps tab. Once installed this tab provides a searchable grid layout for availible addons. These are not managed by CA but rather any unraid user can request their repositories be added.  
 Community Applications was created by the user Squid. Squid has also created many other plugins and you would not go wrong selecting his repo and installing every one of them, although some of the most useful ones will be detailed bellow.
