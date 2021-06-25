@@ -2,7 +2,7 @@
 title: Plugins
 description: A short list of useful plugins
 published: 1
-date: 2021-06-23T15:04:59.432Z
+date: 2021-06-25T20:08:40.836Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-23T15:04:59.432Z
@@ -28,7 +28,7 @@ To add in CA to your server you go to the **plugins** tab, click on **Install pl
 https://raw.githubusercontent.com/Squidly271/community.applications/master/plugins/community.applications.plg
 ```
 
-Click install and let this run, it should go quick, and then refresh the page to see the apps tab now availible.
+Click install and let this run, it should go quick, and then refresh the page to see the apps tab now available.
 
 # Essential plugins
 
@@ -52,18 +52,18 @@ Click install and let this run, it should go quick, and then refresh the page to
 
 ## Nerdpack
 
-### dmacias' Repository
+### Dmacias' Repository
 
 ## Preclear Disks
 
-### gfjardim's Repository
+### Gfjardim's Repository
 
 > A docker container, binhex preclear, is also availible to do the same task. Binhex is a common name that will pop up when searching containers but I have never used this one so I can't recommend it over gfjardim's plugin.
 {.is-warning}
 
 ## Unassigned Devices (Plus)
 
-### dlandon's Repository
+### Dlandon's Repository
 
 ## User Scripts
 
