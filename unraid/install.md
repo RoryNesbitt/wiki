@@ -2,7 +2,7 @@
 title: Unraid installation
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-26T12:51:14.493Z
+date: 2021-06-26T12:58:46.054Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-21T18:00:20.665Z
@@ -10,7 +10,7 @@ dateCreated: 2021-06-21T18:00:20.665Z
 
 # Preparation
 
-<img src="/assets/general/usb-creator.png" style="float:right;">
+![usb-creator.png](/assets/general/usb-creator.png){.align-right}
 
 ## USB
 
