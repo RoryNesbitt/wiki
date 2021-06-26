@@ -2,7 +2,7 @@
 title: Unraid installation
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-23T21:44:45.583Z
+date: 2021-06-26T12:51:14.493Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-21T18:00:20.665Z
@@ -58,7 +58,7 @@ I have one 1TB SSD as my cache drive.
 # Settings
 
 > It is a good idea to add a password to root before doing anything further. Do this via the users tab at the top of the page.
-{.is-danger}
+{.is-warning}
 
 ## Shares
 
