@@ -2,13 +2,12 @@
 title: Home
 description: Documentation for my servers
 published: 1
-date: 2021-06-23T20:57:59.686Z
+date: 2021-06-26T12:59:56.225Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-21T18:00:06.861Z
 ---
 
-<img src="/assets/general/rnd.png" style="width:100px;height:100px;float:right;">
 
 Documentation for my home automation services and IoT projects.
 
