@@ -2,7 +2,7 @@
 title: Unraid installation
 description: Installation instructions for unraid
 published: 1
-date: 2021-06-26T13:02:23.178Z
+date: 2021-06-27T12:25:17.199Z
 tags: server, unraid
 editor: markdown
 dateCreated: 2021-06-21T18:00:20.665Z
@@ -53,7 +53,12 @@ Adding an SSD as a cache drive will speed up writes for the array, as well as re
 
 I have one 1TB SSD as my cache drive.
 
----
+## Auto Start/Spin Down
+
+Changes to the array settings can be made under ***Settings > Disk Settings***.  
+The first thing to do here is turn set Auto start to Yes. This will mean that when you first turn on or you reboot your unraid machine the array will initialise straight away and by extension any docker containers or VMs set to autostart will be able to do so.  
+Also on this page you can set a spin down delay for hard drives in your array. This setting will mean that any drives not in use will be effectivly turned off until they need to be accessed.
+___
 
 # Settings
 
@@ -95,12 +100,19 @@ The system share is for storing your docker.img and libvirt.img.
 > It is advised to set this share to cache only or cache prefer in order to speed up load times with containers. Although regular backups are a must as this means there is no parity protection.
 {.is-info}
 
-## Settings to add
+## Flash settings and backup
 
-- [ ] Activate docker/VMs
-- [ ] Spin down disk
+On the ***MAIN*** page, under boot device, click ***Flash***. This will open the Flash settings page which starts with some info on your USB drive and a <kbd>FLASH BACKUP</kbd> button. Clicking this will create and download a zip file which can be used to restore or recreate your unraid boot drive. This can be done on a schedule with the [My Servers plugin](/unraid/plugins#essential-plugins).
 
+Next is the SMB settings for the USB. This can be useful if you need to make persistent changes such as adding perminent ssh keys but for the most part you want to have this set to Export: No to keep it secure.
 
-# Community applications
+Lastly you can edit the syslinux config to make changes to how unraid boots and what each of it's boot options do. However, with the latest version of unraid it is unlikely you will need to make any changes here.
+
+## Activate Docker/VMs
+
+Docker apps and VMs can be activated by going top ***Settings > Docker*** or ***Settings > VM Manager***.  
+Once enbled you can then add apps and VMs under their respective tab. I don't make much use of VMs but docker containers on unraid are incredibly well managed and by far the best use of your server.
+
+# Community applications (The Apps Tab)
 
 Community applications should almost always be the first thing you do on an unraid server. Install instructions are on [plugins](/unraid/plugins).
