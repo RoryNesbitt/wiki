@@ -2,7 +2,7 @@
 title: Plugins
 description: A short list of useful plugins
 published: 1
-date: 2021-07-03T19:58:13.260Z
+date: 2021-07-03T20:03:44.478Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-23T15:04:59.432Z
@@ -59,6 +59,10 @@ Fix Common Problems does exactly what you expect. It will periodically scan your
 ## My Servers
 
 ### Official Unraid Repository
+
+This is an official unraid plugin which will connect to your unraid.net account and display server information on unraid.net as well as account information on your own server. It also alows for remote access to your server, although in my experience this is a bit finicky if you ever decide to change it's setup.
+
+The reason this plugin makes it in to essential however is it's ability to backup your USB drive to your unraid.net account. This will make the usual zip backup which can be downloaded through the gui and instead store it off site meaning at any point you can log in to your account and get an up to data copy of all your settings for USB recovery.
 
 ## Nerdpack
 
