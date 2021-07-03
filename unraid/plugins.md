@@ -2,7 +2,7 @@
 title: Plugins
 description: A short list of useful plugins
 published: 1
-date: 2021-07-03T19:42:37.072Z
+date: 2021-07-03T19:43:21.446Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-23T15:04:59.432Z
@@ -38,10 +38,10 @@ Click install and let this run, it should go quick, and then refresh the page to
 
 ### Squid's Repository
 
-This plugin will create a backup of your appdata share and store it somewhere better protected such as the parity protected array or a network drive. It is also able to run this on specific days and times for scheduled backups.
+This plugin will create a backup of your appdata share and store it somewhere better protected such as the parity protected array or a network drive. It is also able to run this on specific days and times for scheduled backups.  
+The backups can then be restored from within this same plugin.
 >This should be done when the server is not being used as it will take all docker containers offline while it runs.
 {.is-info}
-
 
 ## SSD TRIM
 
