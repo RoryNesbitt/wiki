@@ -2,7 +2,7 @@
 title: Plugins
 description: A short list of useful plugins
 published: 1
-date: 2021-07-03T19:43:21.446Z
+date: 2021-07-03T19:54:37.111Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-23T15:04:59.432Z
@@ -43,9 +43,12 @@ The backups can then be restored from within this same plugin.
 >This should be done when the server is not being used as it will take all docker containers offline while it runs.
 {.is-info}
 
-## SSD TRIM
+## Dynamix SSD Trim
 
 ### Dynamix Repository
+
+This plugin is highly recommended if you are using an xfs formatted SSD for your cache drive.  
+This plugin will mark deleted pages on your SSD as Stale meanign when the controller is copying stored data to a new block it will nmto also copy over the deleted pages. Over time this will have a large effect ont he number of writes to each page which should extend teh SSD's lifespan.
 
 ## Fix Common Problems
 
