@@ -2,7 +2,7 @@
 title: Plugins
 description: A short list of useful plugins
 published: 1
-date: 2021-07-03T19:54:37.111Z
+date: 2021-07-03T19:58:13.260Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-23T15:04:59.432Z
@@ -53,6 +53,8 @@ This plugin will mark deleted pages on your SSD as Stale meanign when the contro
 ## Fix Common Problems
 
 ### Squid's Repository
+
+Fix Common Problems does exactly what you expect. It will periodically scan your server and notify you of any common unraid issues which it notices. This will work out of the box and it will also suggest simple fixes to most of the errors it finds. Probably the most important plugin for any unraid server.
 
 ## My Servers
 
