@@ -2,7 +2,7 @@
 title: Plugins
 description: A short list of useful plugins
 published: 1
-date: 2021-07-07T15:44:04.853Z
+date: 2021-07-07T16:06:27.996Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-23T15:04:59.432Z
@@ -71,11 +71,17 @@ The reason this plugin makes it in to essential however is it's ability to backu
 Nerdpack allows you to select extra CLI packages to download and install. This is essential for anyone wanting to SSH in to their server as any packages tehy add manually will get wiped when they reboot and unraid is loaded from USB again.  
 Combining this with a userscript I install zsh and retrieve my configs from github so my CLI will match my other linux devices.
 
-## Preclear Disks
+## Preclear Disk
 
 ### Gfjardim's Repository
 
+Preclear Disks gives an informative GUI to a couple preclear scripts which allow you to 'zero' new hard disks before you add them to your array.  
+This is a proccess that takes several hours and by doing it with this plugin it can be run with the array still active saving many hours of downtime. It has the options to run multiple times (3 is recommended) and to perform a full read operation on every bit before and after each run to check for any errors in the drive.
+
 > A docker container, binhex preclear, is also availible to do the same task. Binhex is a common name that will pop up when searching containers but I have never used this one so I can't recommend it over gfjardim's plugin.
+{.is-info}
+
+> This plugin still states that you must install the scripts seperate but the support page will confirm that it now includes Gfjardim's self made script as well as a copy of bjp999's script.
 {.is-info}
 
 ## Unassigned Devices (Plus)
