@@ -2,7 +2,7 @@
 title: Plugins
 description: A short list of useful plugins
 published: 1
-date: 2021-07-07T16:12:53.202Z
+date: 2021-07-07T16:21:27.507Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-23T15:04:59.432Z
@@ -95,3 +95,7 @@ Unassigned Devices plus add access to additional formats and a destructive mode 
 ## User Scripts
 
 ### Squid's Repository
+
+Users Scripts is the unraid version of crontab. It allows you to write your own custom scripts through the webgui and run them on a schedule or have them triggered by the starting and stopping of the array. It includes by default scripts to remove unussed docker images, cleanup .DS_Store files leaft by Apple's Finder and one to display the size of your docker log. I periodically run the docker image removal manually but I have no need so far for either of the other two.
+
+Combining this with the rclone plugin I have a script to mount my cloud storage when the array starts and then unmount it when it stops.
