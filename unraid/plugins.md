@@ -2,7 +2,7 @@
 title: Plugins
 description: A short list of useful plugins
 published: 1
-date: 2021-07-07T16:06:27.996Z
+date: 2021-07-07T16:12:53.202Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-23T15:04:59.432Z
@@ -87,6 +87,10 @@ This is a proccess that takes several hours and by doing it with this plugin it 
 ## Unassigned Devices (Plus)
 
 ### Dlandon's Repository
+
+Unassigned devices allows you to mount and access hard drives that have not been added to the array, useful for transferring files before preclearing.
+
+Unassigned Devices plus add access to additional formats and a destructive mode which lets you erase and format the drives from this plugin.
 
 ## User Scripts
 
