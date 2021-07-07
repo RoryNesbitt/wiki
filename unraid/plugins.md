@@ -2,7 +2,7 @@
 title: Plugins
 description: A short list of useful plugins
 published: 1
-date: 2021-07-03T20:03:44.478Z
+date: 2021-07-07T15:44:04.853Z
 tags: organisation
 editor: markdown
 dateCreated: 2021-06-23T15:04:59.432Z
@@ -41,7 +41,7 @@ Click install and let this run, it should go quick, and then refresh the page to
 This plugin will create a backup of your appdata share and store it somewhere better protected such as the parity protected array or a network drive. It is also able to run this on specific days and times for scheduled backups.  
 The backups can then be restored from within this same plugin.
 >This should be done when the server is not being used as it will take all docker containers offline while it runs.
-{.is-info}
+{.is-warning}
 
 ## Dynamix SSD Trim
 
@@ -64,16 +64,19 @@ This is an official unraid plugin which will connect to your unraid.net account 
 
 The reason this plugin makes it in to essential however is it's ability to backup your USB drive to your unraid.net account. This will make the usual zip backup which can be downloaded through the gui and instead store it off site meaning at any point you can log in to your account and get an up to data copy of all your settings for USB recovery.
 
-## Nerdpack
+## NerdPack GUI
 
 ### Dmacias' Repository
+
+Nerdpack allows you to select extra CLI packages to download and install. This is essential for anyone wanting to SSH in to their server as any packages tehy add manually will get wiped when they reboot and unraid is loaded from USB again.  
+Combining this with a userscript I install zsh and retrieve my configs from github so my CLI will match my other linux devices.
 
 ## Preclear Disks
 
 ### Gfjardim's Repository
 
 > A docker container, binhex preclear, is also availible to do the same task. Binhex is a common name that will pop up when searching containers but I have never used this one so I can't recommend it over gfjardim's plugin.
-{.is-warning}
+{.is-info}
 
 ## Unassigned Devices (Plus)
 
