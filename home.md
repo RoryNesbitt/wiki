@@ -2,10 +2,10 @@
 title: Home
 description: Documentation for my servers
 published: 1
-date: 2021-06-26T13:00:30.211Z
+date: 2023-03-26T11:40:25.659Z
 tags: 
 editor: markdown
-dateCreated: 2021-06-21T18:00:06.861Z
+dateCreated: 2023-03-19T20:38:01.230Z
 ---
 
 ![rnd.png](/assets/general/rnd.png){.align-abstopright}
