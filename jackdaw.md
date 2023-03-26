@@ -2,10 +2,10 @@
 title: Jackdaw
 description: My main server
 published: 1
-date: 2021-06-25T20:09:24.581Z
+date: 2023-03-26T11:40:13.289Z
 tags: server, unraid
 editor: markdown
-dateCreated: 2021-06-21T18:00:10.310Z
+dateCreated: 2023-03-25T15:42:08.557Z
 ---
 
 This is my main server I use for home automation, running unraid
