@@ -2,7 +2,7 @@
 title: Authlia authentication with LDAP
 description: 
 published: 1
-date: 2023-04-16T18:36:35.831Z
+date: 2023-04-16T18:52:23.018Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-15T18:38:00.184Z
@@ -13,6 +13,11 @@ Authelia provides site wide login authentication with either a file of usernames
 > For creating secrets you can use [allkeysgenerator](https://www.allkeysgenerator.com/Random/Security-Encryption-Key-Generator.aspx)
 {.is-info}
 
+## Prerequisits
+- A reverse proxy such as [Traefik](/traefik)
+- Redis
+- (Optional) An LDAP server such as freeIPA or Active Directory
+- (Optional) an SMTP provider. I recommend [Send In Blue](/sendinblue)
 
 ## tabs {.tabset}
 
@@ -141,112 +146,71 @@ This part tells authelia how to understand LDAP, if using freeIPA then these set
     password: PASSWORD
 ```
 
-
+Set which password policy to use. Standard is basically custom, zxcbn is a better option
 ```yml
 password_policy:
-
-  ## The standard policy allows you to tune individual settings manually.
   standard:
     enabled: false
-
-    ## Require a minimum length for passwords.
     min_length: 8
-
-    ## Require a maximum length for passwords.
     max_length: 0
-
-    ## Require uppercase characters.
     require_uppercase: true
-
-    ## Require lowercase characters.
     require_lowercase: true
-
-    ## Require numeric characters.
     require_number: true
-
-    ## Require special characters.
     require_special: true
 
-  ## zxcvbn is a well known and used password strength algorithm. It does not have tunable settings.
   zxcvbn:
     enabled: true
-
-    ## Configures the minimum score allowed.
     min_score: 3
+```
 
+Access control is where you set the different URLs to different user groups, I'll break it down in a different section
+```yml
 access_control:
 
-  ## Default policy can either be 'bypass', 'one_factor', 'two_factor' or 'deny'. It is the policy applied to any
-  ## resource if there is no policy to be applied to the user.
   default_policy: one_factor
   rules:
-    ## Rules applied to everyone
     - domain: # Public accessable
         - "public.DOMAIN.COM"
         - "public2.DOMAIN.COM"
       policy: bypass
-
     - domain: # api access
         - "*.DOMAIN.COM"
       resources:
         - "^/api([/?].*)?$"
       policy: bypass
-
     - domain: # Admin group
         - "admin.DOMAIN.COM"
         - "admin2.DOMAIN.COM"
       subject:
         - "group:admin"
       policy: two_factor
+```
 
+Settings for the session cookie. This mostly effects times you don't click remember me
+```yml
 session:
-  ## The name of the session cookie.
   name: authelia_session
-
-  ## The domain to protect.
-  ## Note: the authenticator must also be in that domain.
-  ## If empty, the cookie is restricted to the subdomain of the issuer.
   domain: DOMAIN.COM
-
-  ## Sets the Cookie SameSite value. Possible options are none, lax, or strict.
-  ## Please read https://www.authelia.com/c/session#same_site
   same_site: lax
-
-  ## The secret to encrypt the session data. This is only used with Redis / Redis Sentinel.
-  ## Secret can also be set using a secret: https://www.authelia.com/c/secrets
   secret: "SECRET"
-
-  ## The time before the cookie expires and the session is destroyed if remember me IS NOT selected.
   expiration: 1h
-
-  ## The inactivity time before the session is reset. If expiration is set to 1h, and this is set to 5m, if the user
-  ## does not select the remember me option their session will get destroyed after 1h, or after 5m since the last time
-  ## Authelia detected user activity.
   inactivity: 5m
-
-  ## The time before the cookie expires and the session is destroyed if remember me IS selected.
-  ## Value of -1 disables remember me.
   remember_me_duration: 1M
+```
 
+Redis is an in RAM database, I think. You might need to change the index if you use it for other things
+```yml
   redis:
     host: redis
     port: 6379
-
-    ## Username used for redis authentication. This is optional and a new feature in redis 6.0.
-    # username: authelia
-
-    ## Password can also be set using a secret: https://www.authelia.com/c/secrets
     password: PASSWORD
-
-    ## This is the Redis DB Index https://redis.io/commands/select (sometimes referred to as database number, DB, etc).
     database_index: 0
-
-    ## The maximum number of concurrent active connections to Redis.
     maximum_active_connections: 8
-
-    ## The target number of idle connections to have open ready for work. Useful when opening connections is slow.
     minimum_idle_connections: 0
+```
 
+
+```yml
 regulation:
   ## The number of failed login attempts before user is banned. Set it to 0 to disable regulation.
   max_retries: 3
@@ -258,7 +222,10 @@ regulation:
 
   ## The length of time before a banned user can login again.
   ban_time: 12h
+```
 
+
+```yml
 ## The available providers are: `local`, `mysql`, `postgres`. You must use one and only one of these providers.
 storage:
   ## The encryption key that is used to encrypt sensitive information in the database. Must be a string with a minimum
@@ -273,7 +240,10 @@ storage:
     ## Password can also be set using a secret: https://www.authelia.com/c/secrets
     password: PASSWORD
     timeout: 5s
+```
 
+
+```yml
 notifier:
   ## You can disable the notifier startup check by setting this to true.
   disable_startup_check: false
