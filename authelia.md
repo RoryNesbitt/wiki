@@ -2,7 +2,7 @@
 title: Authlia authentication with LDAP
 description: 
 published: 1
-date: 2023-04-16T19:21:36.987Z
+date: 2023-04-16T19:22:14.593Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-15T18:38:00.184Z
@@ -461,6 +461,4 @@ notifier:
       minimum_version: TLS1.2
 ...
 ```
-
-## new part
 
