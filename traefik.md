@@ -1,11 +1,11 @@
 ---
 title: Traefik Reverse Proxy
-description:
+description: 
 published: 1
-date: 2023-03-17T18:40:06.861Z
+date: 2023-04-16T19:09:15.410Z
 tags: 
 editor: markdown
-dateCreated: 2023-03-17T18:00:06.861Z
+dateCreated: 2023-03-25T15:42:13.286Z
 ---
 
 Traefik is the reverse proxy I use due to the simplicity of adding a new service when that service is running on the same docker network.
@@ -320,7 +320,7 @@ The security headers middleware adds custom html header tags. I don't pretend to
         stsPreload: true
 ```
 
-The authelia middleware assumes that you have authelia set up on the same docker network. if not replace `http://authelia` with authelias IP address.
+The [authelia](/authelia) middleware assumes that you have authelia set up on the same docker network. if not replace `http://authelia` with authelias IP address.
 Authelia basic is included because it was in their docs, but I haven't made use of it
 
 > When you replace DOMAIN.COM you can make this link to any subdomain or page and that is where authelia will redirect to.
