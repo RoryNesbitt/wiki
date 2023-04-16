@@ -1,11 +1,11 @@
 ---
 title: Authlia authentication with LDAP
-description:
+description: 
 published: 1
-date: 2023-04-15T18:40:06.861Z
+date: 2023-04-16T18:36:35.831Z
 tags: 
 editor: markdown
-dateCreated: 2023-04-17T18:30:00.846Z
+dateCreated: 2023-04-15T18:38:00.184Z
 ---
 
 Authelia provides site wide login authentication with either a file of usernames or an LDAP server backend.
@@ -22,243 +22,127 @@ This file is used to define the authelia config.
 To reload this restart the authelia container.
 
 > A default will be created when authelia is first run. It is advisable to edit that rather than replacing it completely.
-{.is-info}
+{.is-warning}
 
 ### Explanation
 
+Make it dark because you're not a savage
 ```yml
 theme: dark
+```
 
+This secret is used for validating users identity
+```yml
 jwt_secret: "SECRET"
+```
 
-## Default redirection URL
+Usually authelia will redirect back to whatever you were trying to access, this link is used if you go directly to the authelia url
+```yml
 default_redirection_url: https://DOMAIN.COM/
+```
 
-## Set the default 2FA method for new users and for when a user has a preferred method configured that has been
-## disabled. This setting must be a method that is enabled.
-## Options are totp, webauthn, mobile_push.
+I don't know why this is empty but it works, I'll update this when I know more
+```yml
 default_2fa_method: ""
+```
 
+Settings for the server itself, most of this just lets it be happy about any incoming traffic
+```yml
 server:
-
-  ## The address to listen on.
   host: 0.0.0.0
-
-  ## The port to listen on.
   port: 9091
-
-  ## Set the single level path Authelia listens on.
-  ## Must be alphanumeric chars and should not contain any slashes.
   path: ""
-
-  ## Enables the pprof endpoint.
   enable_pprof: false
-
-  ## Enables the expvars endpoint.
   enable_expvars: false
-
-  ## Disables writing the health check vars to /app/.healthcheck.env which makes healthcheck.sh return exit code 0.
-  ## This is disabled by default if either /app/.healthcheck.env or /app/healthcheck.sh do not exist.
   disable_healthcheck: false
-
-  ## Authelia by default doesn't accept TLS communication on the server port. This section overrides this behaviour.
   tls:
-    ## The path to the DER base64/PEM format private key.
     key: ""
-
-    ## The path to the DER base64/PEM format public certificate.
     certificate: ""
-
-    ## The list of certificates for client authentication.
     client_certificates: []
-
   headers:
-
-    ## The CSP Template. Read the docs.
     csp_template: ""
+```
 
+Set the log level and disable telemetry
+```yml
 log:
-  ## Level of verbosity for logs: info, debug, trace.
   level: info
 
 telemetry:
-
   metrics:
-    ## Enable Metrics.
     enabled: false
-
-    ## The address to listen on for metrics. This should be on a different port to the main server.port value.
     address: tcp://0.0.0.0:9959
+```
 
-## Parameters used for TOTP generation.
+totp and webauth are two of the TFA options, the other is mobile_push
+```yml
 totp:
-  ## Disable TOTP.
   disable: false
-
-  ## The issuer name displayed in the Authenticator application of your choice.
   issuer: DOMAIN.COM
-
-  ## The TOTP algorithm to use.
-  ## It is CRITICAL you read the documentation before changing this option:
-  ## https://www.authelia.com/c/totp#algorithm
   algorithm: sha1
-
-  ## The number of digits a user has to input. Must either be 6 or 8.
-  ## Changing this option only affects newly generated TOTP configurations.
-  ## It is CRITICAL you read the documentation before changing this option:
-  ## https://www.authelia.com/c/totp#digits
   digits: 6
-
-  ## The period in seconds a one-time password is valid for.
-  ## Changing this option only affects newly generated TOTP configurations.
   period: 30
-
-  ## The skew controls number of one-time passwords either side of the current one that are valid.
-  ## Warning: before changing skew read the docs link below.
   skew: 1
-  ## See: https://www.authelia.com/c/totp#input-validation to read
-  ## the documentation.
-
-  ## The size of the generated shared secrets. Default is 32 and is sufficient in most use cases, minimum is 20.
   secret_size: 32
 
-## Parameters used for WebAuthn.
 webauthn:
-  ## Disable Webauthn.
   disable: false
-
-  ## Adjust the interaction timeout for Webauthn dialogues.
   timeout: 60s
-
-  ## The display name the browser should show the user for when using Webauthn to login/register.
   display_name: Authelia
-
-  ## Conveyance preference controls if we collect the attestation statement including the AAGUID from the device.
-  ## Options are none, indirect, direct.
   attestation_conveyance_preference: indirect
-
-  ## User verification controls if the user must make a gesture or action to confirm they are present.
-  ## Options are required, preferred, discouraged.
   user_verification: preferred
 
-## This is used to validate the servers time is accurate enough to validate TOTP.
+```
+
+Get the time from cloudflares ntp address
+```yml
 ntp:
-  ## NTP server address.
-  address: "time.cloudflare.com:123"
-
-  ## NTP version.
+  address: "time.cloudflare.com:123"#
   version: 4
-
-  ## Maximum allowed time offset between the host and the NTP server.
   max_desync: 3s
-
-  ## Disables the NTP check on startup entirely. This means Authelia will not contact a remote service at all if you
-  ## set this to true, and can operate in a truly offline mode.
   disable_startup_check: false
-
-  ## The default of false will prevent startup only if we can contact the NTP server and the time is out of sync with
-  ## the NTP server more than the configured max_desync. If you set this to true, an error will be logged but startup
-  ## will continue regardless of results.
   disable_failure: false
+```
 
-## The available providers are: `file`, `ldap`. You must use only one of these providers.
+The authentication backend is where you get the use accounts from. Set the basics here
+```yml
 authentication_backend:
-
-  ## Password Reset Options.
   password_reset:
-    ## Disable both the HTML element and the API for reset password functionality.
     disable: false
-
-    ## External reset password url that redirects the user to an external reset portal. This disables the internal reset
-    ## functionality.
     custom_url: ""
-
-  ## The amount of time to wait before we refresh data from the authentication backend. Uses duration notation.
   refresh_interval: 5m
+```
 
+I use LDAP with freeIPA so that's whats here. The other option is a yaml file, it's simpler but it's annnoying to add to
+```yml
   ldap:
     implementation: custom
-
-    ## The url to the ldap server. Format: <scheme>://<address>[:<port>].
-    ## Scheme can be ldap or ldaps in the format (port optional).
-    url: ldap://10.10.10.5
-
-    ## The dial timeout for LDAP.
+    url: ldap://IP:PORT
     timeout: 5m
-
-    ## Use StartTLS with the LDAP connection.
     start_tls: false
-
     tls:
-
-      ## Skip verifying the server certificate entirely. In preference to setting this we strongly recommend you add the
-      ## certificate or the certificate of the authority signing the certificate to the certificates directory which is
-      ## defined by the `certificates_directory` option at the top of the configuration.
-      ## It's important to note the public key should be added to the directory, not the private key.
-      ## This option is strongly discouraged but may be useful in some self-signed situations where validation is not
-      ## important to the administrator.
       skip_verify: false
-
-      ## Minimum TLS version for the connection.
       minimum_version: TLS1.2
+```
 
-    ## The distinguished name of the container searched for objects in the directory information tree.
-    ## See also: additional_users_dn, additional_groups_dn.
+This part tells authelia how to understand LDAP, if using freeIPA then these settings should be the same for you, just change DOMAIN COM and PASSWORD
+```yml
     base_dn: dc=DOMAIN,dc=COM
-
-    ## The attribute holding the username of the user. This attribute is used to populate the username in the session
     username_attribute: uid
-
-    ## The additional_users_dn is prefixed to base_dn and delimited by a comma when searching for users.
-    ## i.e. with this set to OU=Users and base_dn set to DC=a,DC=com; OU=Users,DC=a,DC=com is searched for users.
     additional_users_dn: cn=users,cn=accounts
-
-    ## The users filter used in search queries to find the user profile based on input filled in login form.
-    ## Various placeholders are available in the user filter which you can read about in the documentation which can
-    ## be found at: https://www.authelia.com/c/ldap#users-filter-replacements
-    ##
-    ## Recommended settings are as follows:
-    ## - Microsoft Active Directory: (&({username_attribute}={input})(objectCategory=person)(objectClass=user))
-    ## - OpenLDAP:
-    ##   - (&({username_attribute}={input})(objectClass=person))
-    ##   - (&({username_attribute}={input})(objectClass=inetOrgPerson))
-    ##
-    ## To allow sign in both with username and email, one can use a filter like
-    ## (&(|({username_attribute}={input})({mail_attribute}={input}))(objectClass=person))
     users_filter: (&({username_attribute}={input})(objectClass=person))
-
-    ## The additional_groups_dn is prefixed to base_dn and delimited by a comma when searching for groups.
-    ## i.e. with this set to OU=Groups and base_dn set to DC=a,DC=com; OU=Groups,DC=a,DC=com is searched for groups.
     additional_groups_dn: cn=users,cn=accounts
-
-    ## The groups filter used in search queries to find the groups based on relevant authenticated user.
-    ## Various placeholders are available in the groups filter which you can read about in the documentation which can
-    ## be found at: https://www.authelia.com/c/ldap#groups-filter-replacements
-    ##
-    ## If your groups use the `groupOfUniqueNames` structure use this instead:
-    ##    (&(uniqueMember={dn})(objectClass=groupOfUniqueNames))
     groups_filter: (&(member={dn})(objectClass=groupOfNames))
-
-    ## The attribute holding the name of the group.
     group_name_attribute: cn
-
-    ## The attribute holding the mail address of the user. If multiple email addresses are defined for a user, only the
-    ## first one returned by the LDAP server is used.
     mail_attribute: mail
-
-    ## The attribute holding the display name of the user. This will be used to greet an authenticated user.
     display_name_attribute: displayName
-
-    ## Follow referrals returned by the server.
-    ## This is especially useful for environments where read-only servers exist. Only implemented for write operations.
     permit_referrals: false
-
-    ## The username and password of the admin user.
     user: uid=admin,cn=users,cn=accounts,dc=DOMAIN,dc=COM
-    ## Password can also be set using a secret: https://www.authelia.com/c/secrets
     password: PASSWORD
+```
 
 
+```yml
 password_policy:
 
   ## The standard policy allows you to tune individual settings manually.
