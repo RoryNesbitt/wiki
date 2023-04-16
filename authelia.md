@@ -2,7 +2,7 @@
 title: Authlia authentication with LDAP
 description: 
 published: 1
-date: 2023-04-16T19:05:17.033Z
+date: 2023-04-16T19:17:27.844Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-15T18:38:00.184Z
@@ -167,7 +167,6 @@ password_policy:
 Access control is where you set the different URLs to different user groups, I'll break it down in a different section
 ```yml
 access_control:
-
   default_policy: one_factor
   rules:
     - domain: # Public accessable
@@ -255,6 +254,42 @@ notifier:
     tls:
       skip_verify: false
       minimum_version: TLS1.2
+```
+### Access Control
+
+The default policy will act on all URLs not specified. Other than adding this everything here goes top down, so it will act on the first match in the list. You can set this to block in order to never let through anything you don't specify, but that seems tedious to me.
+```yml
+access_control:
+  default_policy: one_factor
+```
+
+Setting URLs to bypass will let you access them without authentification
+```yml
+  rules:
+    - domain: # Public accessable
+        - "public.DOMAIN.COM"
+        - "public2.DOMAIN.COM"
+      policy: bypass
+```
+
+This entry adds a bypass on all subdomains but only for api access. The resource is the limitation here that lets that work. If you don't have this entry then some webapps might break 
+```yml
+    - domain: # api access
+        - "*.DOMAIN.COM"
+      resources:
+        - "^/api([/?].*)?$"
+      policy: bypass
+```
+
+The next entry is for giving access to only people part of a group. For this example I have made it available to the non-existant group X and also to anyone with admin rights. I have also set these to require TFA
+```yml
+    - domain: # group X
+        - "x.DOMAIN.COM"
+        - "x2.DOMAIN.COM"
+      subject:
+        - "group:X"
+        - "group:admin"
+      policy: two_factor
 ```
 
 ### Complete file
@@ -368,11 +403,13 @@ access_control:
       resources:
         - "^/api([/?].*)?$"
       policy: bypass
-    - domain: # Admin group
-        - "admin.DOMAIN.COM"
-        - "admin2.DOMAIN.COM"
+    - domain: # group X
+        - "x.DOMAIN.COM"
+        - "x2.DOMAIN.COM"
       subject:
+        - "group:X"
         - "group:admin"
+      policy: two_factor
       policy: two_factor
 
 session:
