@@ -2,7 +2,7 @@
 title: Authlia authentication with LDAP
 description: 
 published: 1
-date: 2023-04-16T19:17:27.844Z
+date: 2023-04-16T19:21:36.987Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-15T18:38:00.184Z
@@ -226,7 +226,6 @@ storage:
     port: 3306
     database: authelia
     username: authelia
-    ## Password can also be set using a secret: https://www.authelia.com/c/secrets
     password: PASSWORD
     timeout: 5s
 ```
@@ -237,7 +236,6 @@ The account name can be anything you like and be from any email you like, I just
 If you don't want that just comment this out
 ```yml
 notifier:
-  ## You can disable the notifier startup check by setting this to true.
   disable_startup_check: false
   smtp:
     host: smtp-relay.sendinblue.com
@@ -441,12 +439,10 @@ storage:
     port: 3306
     database: authelia
     username: authelia
-    ## Password can also be set using a secret: https://www.authelia.com/c/secrets
     password: PASSWORD
     timeout: 5s
 
 notifier:
-  ## You can disable the notifier startup check by setting this to true.
   disable_startup_check: false
   smtp:
     host: smtp-relay.sendinblue.com
