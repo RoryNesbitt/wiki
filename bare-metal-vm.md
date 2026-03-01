@@ -2,7 +2,7 @@
 title: Bare Metal VM
 description: Hardware passthrough for your existing OS
 published: true
-date: 2026-03-01T15:13:54.363Z
+date: 2026-03-01T19:42:41.546Z
 tags: 
 editor: markdown
 dateCreated: 2026-03-01T15:06:41.871Z
@@ -11,6 +11,10 @@ dateCreated: 2026-03-01T15:06:41.871Z
 > ## WIP
 > This page is very much a work in progress. I'll make it make sense when I get the commands working
 > {.is-warning}
+
+## Setting up the bootloader
+
+
 
 ## Installing KVM
 
