@@ -2,7 +2,7 @@
 title: Bare Metal VM
 description: Hardware passthrough for your existing OS
 published: true
-date: 2026-03-02T14:29:18.073Z
+date: 2026-03-02T14:30:00.007Z
 tags: 
 editor: markdown
 dateCreated: 2026-03-01T15:06:41.871Z
@@ -111,7 +111,7 @@ select XML and copy in the following:
 
 Make sure you change `<selected-disk>` to whichever drive you want to use. In my case I have a secondary SSD with windows on it so mine looks like `<source dev="/dev/<selected-disk>"/>`
 
-> It would be a good idea to add [the virtio drivers](https://github.com/virtio-win/kvm-guest-drivers-windows/wiki/Driver-installation) at this point too. However it's been so long since I had to do this part I'm not comfortable giving a definitive method I haven't tested.
+> It would be a good idea to add [the virtio drivers](https://github.com/virtio-win/kvm-guest-drivers-windows/wiki/Driver-installation) at this point too. However it's been so long since I had to do this part I'm not comfortable giving a definitive method that I haven't tested.
 > {.is-warning}
 
 > For windows 11 you will likely need TPM. It might not seem to cause issues at first but you know what windows is like.
