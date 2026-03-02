@@ -60,8 +60,12 @@ Firstly, in virt-manager go to edit, prefrences and make sure 'Enable XML editin
 
 ## The starter VM
 
-# Tabs {.tabset}
+# tabs-gpu {.tabset}
 ## Guide
+
+> There is something I've missed here that stops you from changing the resolution in a windows VM
+> I'll update this when I figure it out. Until then, the complete xml example doesn't have that issue.
+> {.is-danger}
 
 This is not going to be bare-metal-like. This is just to get the original OS virtualised.
 
@@ -101,12 +105,7 @@ Make sure you change `<selected-disk>` to whichever drive you want to use. In my
 > Version: 2.0
 > {.is-warning}
 
-
-
 You can now start your VM and you will be greeted by your existing OS installation. I like to keep this version of it around for when I want to run something in the background without taking over my whole system.
-
-> There is something I've missed here that stops you from changing the resolution in a windows VM, I'll update this when I figure it out. Until then, the complete xml example doesn't have that issue.
-> {.is-danger}
 
 ## XML
 ```xml
