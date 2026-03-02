@@ -379,7 +379,7 @@ Remove the following sections, we no longer need them
 
 Click on 'Add Hardware' and select 'PCI Host Device'
 
-> If it is not clear which iommu group to pass through check out [this script](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/3)-IOMMU-Groups) from the original guide
+> If it is not clear which iommu group to pass through check out [this script](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/3\)-IOMMU-Groups) from the original guide
 > {.is-info}
 
 You will need to pass the entire group, except the bridge. If you are unclear which that is see the above info block.
