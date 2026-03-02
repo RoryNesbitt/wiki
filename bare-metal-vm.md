@@ -2,7 +2,7 @@
 title: Bare Metal VM
 description: Hardware passthrough for your existing OS
 published: true
-date: 2026-03-02T14:30:00.007Z
+date: 2026-03-02T14:32:11.319Z
 tags: 
 editor: markdown
 dateCreated: 2026-03-01T15:06:41.871Z
@@ -77,8 +77,8 @@ Firstly, in virt-manager go to edit, prefrences and make sure 'Enable XML editin
 
 ## The starter VM
 
-# Tabs {.tabset}
-## Guide
+### Tabs {.tabset}
+#### Guide
 
 > There is something I've missed here that stops you from changing the resolution in a windows VM
 > I'll update this when I figure it out. Until then, the complete xml example doesn't have that issue.
@@ -123,7 +123,7 @@ Make sure you change `<selected-disk>` to whichever drive you want to use. In my
 
 You can now start your VM and you will be greeted by your existing OS installation. I like to keep this version of it around for when I want to run something in the background without taking over my whole system.
 
-## XML
+#### XML
 ```xml
 <domain type="kvm">
   <name>win11</name>
