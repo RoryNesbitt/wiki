@@ -334,6 +334,18 @@ To confirm it worked check that these files exist.
 
 In order to passthrough the gpu you need a copy of the ROM file. Since we're working with an existing bare-metal installation the best method is to boot it bare-metal and use GPU-Z.
 If you are on an NVidia GPU the ROM file will need patched. To do that follow [this part of risingprismtvs guide](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/6\)-Preparation-and-placing-of-the-ROM-file)
+I saved my rom as gpu.rom.
+
+> I highly recommend saving it somewhere once you confirm it works, I thought I would only do this once but now I've had to redo it so many times I'm writting a whole guide about it.
+> {.is-warning}
+
+Place it in the correct directory with the following commands
+```sh
+sudo chmod -R 644 patched.rom
+sudo chown $USER:$USER patched.rom
+sudo mkdir /usr/share/vgabios
+sudo mv gpu.rom /usr/share/vgabios/
+```
 
 The best way to 'clone' the vm in order to keep both the spicevmc version (The one we've already created) AND have one with full gpu passthrough, is to just edit the xml and change the name.
 There are 3 things we are going to change before we save this. 
