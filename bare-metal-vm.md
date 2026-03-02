@@ -332,6 +332,28 @@ To confirm it worked check that these files exist.
 # Tabs {.tabset}
 ## Guide
 
+In order to passthrough the gpu you need a copy of the ROM file. Since we're working with an existing bare-metal installation the best method is to boot it bare-metal and use GPU-Z.
+If you are on an NVidia GPU the ROM file will need patched. To do that follow [this part of risingprismtvs guide](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/6\)-Preparation-and-placing-of-the-ROM-file)
+
+The best way to 'clone' the vm in order to keep both the spicevmc version (The one we've already created) AND have one with full gpu passthrough, is to just edit the xml and change the name.
+There are 3 things we are going to change before we save this. 
+- `<name>win11</name>` needs to become `<name>win11-gpu</name>`, or whatever you have called it. The `-gpu` is what will trigger the qemu hooks
+- The uuid, on the very next line, needs to become unique. You can just change one character in it and that will be enough
+- The nvram entry needs updated from `win11-VARS` to `win11-gpu_VARS` to match with `<name>`. It should be around line 19
+
+When you apply these changes you should notice now that there are 2 entries in virt-manager. From now on we are only going to change the `-gpu` entry.
+
+Remove the following sections, we no longer need them
+- Display Spice
+- Sound ich9
+- Serial 1
+- Controller VirtIO Serial 0
+
+Click on 'Add Hardware' and select 'PCI Host Device'
+
+> If it is not clear which iommu group to pass through check out [this script](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/3)-IOMMU-Groups) from the original guide
+> {.is-info}
+
 ## XML
 
 ```xml
@@ -523,6 +545,3 @@ To confirm it worked check that these files exist.
   </devices>
 </domain>
 ```
-
-> If it is not clear which iommu group to pass through check out [this script](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/3)-IOMMU-Groups) from the original guide
-> {.is-info}
