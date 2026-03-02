@@ -29,9 +29,11 @@ For other bootloaders it will be a similar process, check [the arch wiki](https:
 
 ### Installing KVM
 
-Install all the required packages for KVM/qemu etc
+Install all the required packages for KVM/qemu etc. On arch based distro's it looks like this:
 ```sh
 sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq bridge-utils libguestfs ebtables vde2 openbsd-netcat
+# If you plan to run windows 11 VMs you will also need swtpm
+sudo pacman -S swtpm
 ```
 Join the relevant groups
 These should work as one command but for some reason I have to do them separate
@@ -89,16 +91,42 @@ Make sure you change `<selected-disk>` to whichever drive you want to use. In my
 > It would be a good idea to add [the virtio drivers](https://github.com/virtio-win/kvm-guest-drivers-windows/wiki/Driver-installation) at this point too. However it's been so long since I had to do this part I'm not comfortable giving a definitive method I haven't tested.
 > {.is-warning}
 
+> For windows 11 you will likely need TPM. It might not seem to cause issues at first but you know what windows is like.
+> Click 'Add Hardware', select 'TPM'. Make sure the following are correct;
+> Type: Emulated
+> Model: CRB
+> Version: 2.0
+> {.is-warning}
+
 
 
 You can now start your VM and you will be greated by your existing OS installation. I like to keep this version of it around for when I want to run something in the background without taking over my whole system.
 
 ### Adding GPU passthrough
 
-
-
 > The single gpu passthrough comes from [this guide](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/home). I have extracted the parts that I need so refer to the original guide if your setup is different
 > {.is-info}
+
+We're going to use [risingprismtvs single-gpu-passthrough scripts](https://gitlab.com/risingprismtv/single-gpu-passthrough). This is the same repo as the guide linked to above. However I make a slight modification so that they will trigger for multiple VMs, not just the one called 'win10'.
+
+```sh
+git clone https://gitlab.com/risingprismtv/single-gpu-passthrough
+cd single-gpu-passthrough
+sed -i 's/"win10"/*"-gpu"/' hooks/qemu
+sudo ./install_hooks.sh
+cd ..
+rm -rf single-gpu-passthrough
+```
+
+The change here lets the hook run for any VM that's name ends '-gpu'.
+To confirm it worked check that these files exist.
+
+```sh
+/etc/systemd/system/libvirt-nosleep@.service
+/usr/local/bin/vfio-startup
+/usr/local/bin/vfio-teardown
+/etc/libvirt/hooks/qemu
+```
 
 > If it is not clear which iommu group to pass through check out [this script](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/3)-IOMMU-Groups) from the original guide
 > {.is-info}
