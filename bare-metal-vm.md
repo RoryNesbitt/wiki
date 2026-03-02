@@ -2,7 +2,7 @@
 title: Bare Metal VM
 description: Hardware passthrough for your existing OS
 published: true
-date: 2026-03-02T14:27:35.306Z
+date: 2026-03-02T14:29:18.073Z
 tags: 
 editor: markdown
 dateCreated: 2026-03-01T15:06:41.871Z
@@ -88,7 +88,6 @@ This is not going to be bare-metal-like. This is just to get the original OS vir
 
 Since we are going to be using an existing OS we want virt-manager to do as little as possible.
 
-This is not going to be 
 - Select Manual install
 - choose the correct OS. This is important for Windows 11 as it will add the secure boot version of the firmware
 - Allocate the memory and CPUs you want. We can tweak this later
