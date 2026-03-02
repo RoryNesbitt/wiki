@@ -58,10 +58,10 @@ At this point you should be able to run virt-manager and create VMs
 
 Firstly, in virt-manager go to edit, prefrences and make sure 'Enable XML editing is selected'. If you forget you will have to do this before you can add the storage.
 
+### The starter VM
+
 # Tabs {.tabset}
 ## Guide
-
-### The starter VM
 
 This is not going to be bare-metal-like. This is just to get the original OS virtualised.
 
