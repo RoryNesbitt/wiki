@@ -60,7 +60,7 @@ Firstly, in virt-manager go to edit, prefrences and make sure 'Enable XML editin
 
 ## The starter VM
 
-# tabs-gpu {.tabset}
+# Tabs {.tabset}
 ## Guide
 
 > There is something I've missed here that stops you from changing the resolution in a windows VM
@@ -300,7 +300,7 @@ You can now start your VM and you will be greeted by your existing OS installati
 
 ```
 
-## Adding GPU Passthrough Capability
+### Adding GPU Passthrough Capability
 
 
 > The single gpu passthrough comes from [this guide](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/home). I have extracted the parts that I need so refer to the original guide if your setup is different
@@ -327,7 +327,7 @@ To confirm it worked check that these files exist.
 /etc/libvirt/hooks/qemu
 ```
 
-## Creating a VM with passthrough
+### Creating a VM with passthrough
 
 # Tabs {.tabset}
 ## Guide
