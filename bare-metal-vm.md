@@ -22,6 +22,7 @@ Firstly, enable virtualisation in bios. Then for intel cpus you need to add the 
 For limine bootloader this needs to be added with
 ```sh
 sudoedit /etc/default/limine
+sudo limine-mkinitcpio
 ```
 it should go at the end of the line `KERNEL_CMDLINE[default]+="...."`
 
