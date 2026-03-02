@@ -12,9 +12,9 @@ dateCreated: 2026-03-01T15:06:41.871Z
 > This page is very much a work in progress. I'll make it make sense when I get the commands working
 > {.is-warning}
 
-## Setting up Virtualisation
+# Setting up Virtualisation
 
-### System Requirements
+## System Requirements
 
 Firstly, enable virtualisation in bios. Then for intel cpus you need to add the kernel parameter `intel_iommu=on`.
 
@@ -27,12 +27,12 @@ it should go at the end of the line `KERNEL_CMDLINE[default]+="...."`
 For other bootloaders it will be a similar process, check [the arch wiki](https://wiki.archlinux.org/title/Kernel_parameters) for how to do it. Or for cachyOS and limine see more [here](https://wiki.cachyos.org/configuration/boot_manager_configuration/#limine)
 
 
-### Installing KVM
+## Installing KVM
 
 Install all the required packages for KVM/qemu etc. On arch based distro's it looks like this:
 ```sh
 sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq bridge-utils libguestfs ebtables vde2 openbsd-netcat
-# If you plan to run windows 11 VMs you will also need swtpm
+ If you plan to run windows 11 VMs you will also need swtpm
 sudo pacman -S swtpm
 ```
 Join the relevant groups
@@ -54,11 +54,11 @@ sudo virsh net-start default
 ```
 At this point you should be able to run virt-manager and create VMs
 
-## Setting up the VM
+# Setting up the VM
 
 Firstly, in virt-manager go to edit, prefrences and make sure 'Enable XML editing is selected'. If you forget you will have to do this before you can add the storage.
 
-### The starter VM
+## The starter VM
 
 # Tabs {.tabset}
 ## Guide
@@ -301,7 +301,8 @@ You can now start your VM and you will be greeted by your existing OS installati
 
 ```
 
-### Adding GPU passthrough
+## Adding GPU Passthrough Capability
+
 
 > The single gpu passthrough comes from [this guide](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/home). I have extracted the parts that I need so refer to the original guide if your setup is different
 > {.is-info}
@@ -326,6 +327,8 @@ To confirm it worked check that these files exist.
 /usr/local/bin/vfio-teardown
 /etc/libvirt/hooks/qemu
 ```
+
+## Creating a VM with passthrough
 
 
 
