@@ -348,7 +348,7 @@ To confirm it worked check that these files exist.
 # Tabs {.tabset}
 ## Guide
 
-In order to passthrough the gpu you need a copy of the ROM file. Since we're working with an existing bare-metal installation the best method is to boot it bare-metal and use GPU-Z.
+In order to passthrough the gpu you need a copy of the ROM file. Since we're working with an existing bare-metal installation - and assuming you are virtualising windows - the best method is to boot it bare-metal and use GPU-Z.
 If you are on an NVidia GPU the ROM file will need patched. To do that follow [this part of risingprismtvs guide](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/6\)-Preparation-and-placing-of-the-ROM-file)
 I saved my rom as gpu.rom.
 
