@@ -12,6 +12,11 @@ dateCreated: 2026-03-01T15:06:41.871Z
 > This page is very much a work in progress. I'll make it make sense when I get the commands working
 > {.is-warning}
 
+This guide is intended to take an existing bare-metal install of an OS and let your access it in 3 different ways.
+Bare-metal: the original duel-boot install
+VM: A simple VM that uses the drive for storage
+Bare-metal-like: A hardware passthrough VM that is near indistinguishable from bare-metal
+
 # Setting up Virtualisation
 
 ## System Requirements
@@ -382,7 +387,23 @@ Click on 'Add Hardware' and select 'PCI Host Device'
 > If it is not clear which iommu group to pass through check out [this script](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/3)-IOMMU-Groups) from the original guide
 > {.is-info}
 
+You will need to pass the entire group, except the bridge. If you are unclear which that is see the above info block.
+After you have added each device you need to link the ROM, add this line under `</source>`
+```xml
+ <rom file="/usr/share/vgabios/gpu.rom"/>
+```
+
+> You can also pass through other dedicated devices at this point. For instance, in my setup I have a [PCI USB expansion card](https://www.amazon.co.uk/dp/B00FPIMICA) which I also passthrough.
+> This gives me easy hotswap USB in the VM, though I think you can just tell it to auto-mount now anyway.
+> {.is-info}
+
+This should be you finished. If you start the VM now the qemu hooks will trigger and the VM will take over your graphics.
+This now has most of my CPU, half my RAM, and complete control of my GPU which is why I refer to it as bare-metal-like. It's honestly hard to tell the difference.
+
 ## XML
+
+> This is setup for my hardware and will need edited before you can use it
+> {.is-danger}
 
 ```xml
 <domain type="kvm">
