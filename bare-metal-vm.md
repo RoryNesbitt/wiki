@@ -43,6 +43,22 @@ sudo usermod -aG libvirt-qemu $USER
 sudo usermod -aG kvm $USER
 sudo usermod -aG qemu $USER
 ```
+
+Uncomment the following lines from `/etc/libvirt/libvirtd.conf`
+```sh
+sudoedit /etc/libvirt/libvirtd.conf
+### Uncomment these
+# unix_sock_group = "libvirt"
+# unix_sock_rw_perms = "0770"
+```
+
+Then uncomment these lines from `/etc/libvirt/qemu.conf` and change them both to your username
+```sh
+sudoedit /etc/libvirtd/qemu.conf
+### Edit these
+# user = "root"
+# group = "root"
+```
 And then run the following to set up the system daemons and default network
 ```sh
 sudo systemctl enable --now libvirtd
