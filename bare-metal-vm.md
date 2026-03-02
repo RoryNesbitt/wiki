@@ -32,7 +32,7 @@ For other bootloaders it will be a similar process, check [the arch wiki](https:
 
 Install all the required packages for KVM/qemu etc. On arch based distro's it looks like this:
 ```sh
-sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq bridge-utils libguestfs ebtables vde2 openbsd-netcat
+sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq bridge-utils libguestfs ebtables vde2 openbsd-netcat ebtables
  If you plan to run windows 11 VMs you will also need swtpm
 sudo pacman -S swtpm
 ```
