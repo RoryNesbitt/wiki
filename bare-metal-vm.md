@@ -103,7 +103,10 @@ Make sure you change `<selected-disk>` to whichever drive you want to use. In my
 
 
 
-You can now start your VM and you will be greated by your existing OS installation. I like to keep this version of it around for when I want to run something in the background without taking over my whole system.
+You can now start your VM and you will be greeted by your existing OS installation. I like to keep this version of it around for when I want to run something in the background without taking over my whole system.
+
+> There is something I've missed here that stops you from changing the resolution in a windows VM, I'll update this when I figure it out. Until then, the complete xml example doesn't have that issue.
+> {.is-danger}
 
 ## XML
 ```xml
@@ -323,6 +326,8 @@ To confirm it worked check that these files exist.
 /usr/local/bin/vfio-teardown
 /etc/libvirt/hooks/qemu
 ```
+
+
 
 > If it is not clear which iommu group to pass through check out [this script](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/3)-IOMMU-Groups) from the original guide
 > {.is-info}
