@@ -2,7 +2,7 @@
 title: Bare Metal VM
 description: Hardware passthrough for your existing OS
 published: true
-date: 2026-03-07T19:36:40.520Z
+date: 2026-03-21T20:33:40.005Z
 tags: 
 editor: markdown
 dateCreated: 2026-03-01T15:06:41.871Z
@@ -33,7 +33,7 @@ For other bootloaders it will be a similar process, check [the arch wiki](https:
 
 Install all the required packages for KVM/qemu etc. On arch based distro's it looks like this:
 ```sh
-sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq bridge-utils libguestfs ebtables vde2 openbsd-netcat ebtables iptables-nft
+sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq bridge-utils ebtables vde2 openbsd-netcat ebtables iptables-nft
  If you plan to run windows 11 VMs you will also need swtpm
 sudo pacman -S swtpm
 ```
