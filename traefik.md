@@ -317,7 +317,7 @@ The security headers middleware adds custom html header tags. I don't pretend to
         stsPreload: true
 ```
 
-The [authelia](/authelia) middleware assumes that you have authelia set up on the same docker network. if not replace `http://authelia` with authelias IP address.
+The [[authelia|authelia]] middleware assumes that you have authelia set up on the same docker network. if not replace `http://authelia` with authelias IP address.
 Authelia basic is included because it was in their docs, but I haven't made use of it
 
 > When you replace DOMAIN.COM you can make this link to any subdomain or page and that is where authelia will redirect to.

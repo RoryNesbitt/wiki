@@ -9,9 +9,9 @@ This is my main server I use for home automation, running unraid
 
 ## Unraid pages
 
-- [Installing unraid](/unraid/install)
-- [Important plugins](/unraid/plugins)
-- [My containers](/unraid/docker)
+- [[unraid/install|Installing unraid]]
+- [[unraid/plugins|Important plugins]]
+- [[unraid/docker|My containers]]
 {.links-list}
 
 ---

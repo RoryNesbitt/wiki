@@ -14,9 +14,9 @@ Documentation for my home automation services and IoT projects.
 
 ## Contents
 
-- [Jackdaw *Main server*](/jackdaw)  
-- [Raspberry Pis *Docker & automation*](/rpi)
-- [Wiki.js *Cheatsheet for page formatting*](/wikijs)
+- [[jackdaw|Jackdaw *Main server*]]  
+- [[rpi|Raspberry Pis *Docker & automation*]]
+- [[wikijs|Wiki.js *Cheatsheet for page formatting*]]
 {.links-list}
 
 ---

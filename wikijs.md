@@ -30,20 +30,20 @@ Headers Range in size with 1 being the biggest down to 6
 
 ### Example
 
-Links can be [anywhere](/wikijs "This ironically goes nowhere") in the text
+Links can be [[wikijs "This ironically goes nowhere"|anywhere]] in the text
 
-- [Links can be formatted *as a list of blocks*](/wikijs "Alt text")
-- [- by adding <kbd>-</kbd> to each line *and `{.links-list}` at the end*](/wikijs "Alt text")
+- [[wikijs "Alt text"|Links can be formatted *as a list of blocks*]]
+- [[wikijs "Alt text"|- by adding <kbd>-</kbd> to each line *and `{.links-list}` at the end*]]
 - [And including the description *[surrounded by \*asterix\*]*](/wikijs "Alt text")
 {.links-list}
 
 ### Code
 
 ```txt
-Links can be [anywhere](/path/to/page "Description").
+Links can be [[path/to/page "Description"|anywhere]].
 
-- [Links can be formatted *as a list of blocks*](/wikijs "Alt text")
-- [- by adding <kbd>-</kbd> to each line *and `{.links-list}` at the end*](/wikijs "Alt text")
+- [[wikijs "Alt text"|Links can be formatted *as a list of blocks*]]
+- [[wikijs "Alt text"|- by adding <kbd>-</kbd> to each line *and `{.links-list}` at the end*]]
 - [And including the description *[surrounded by \*asterix\*]*](/wikijs "Alt text")
 {.links-list}
 ```

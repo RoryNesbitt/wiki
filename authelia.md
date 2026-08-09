@@ -11,11 +11,11 @@ Authelia provides site wide login authentication with either a file of usernames
 {.is-info}
 
 ## Prerequisits
-- A reverse proxy such as [Traefik](/traefik)
+- A reverse proxy such as [[traefik|Traefik]]
 - Redis
 - (Optional) An LDAP server such as freeIPA or Active Directory
 - (Optional|Recommended) A mysql database such as mariaDB
-- (Optional) an SMTP provider. I recommend [Send In Blue](/sendinblue)
+- (Optional) an SMTP provider. I recommend [[sendinblue|Send In Blue]]
 
 ## tabs {.tabset}
 

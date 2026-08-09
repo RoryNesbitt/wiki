@@ -99,7 +99,7 @@ The system share is for storing your docker.img and libvirt.img.
 
 ## Flash settings and backup
 
-On the ***MAIN*** page, under boot device, click ***Flash***. This will open the Flash settings page which starts with some info on your USB drive and a <kbd>FLASH BACKUP</kbd> button. Clicking this will create and download a zip file which can be used to restore or recreate your unraid boot drive. This can be done on a schedule with the [My Servers plugin](/unraid/plugins#essential-plugins).
+On the ***MAIN*** page, under boot device, click ***Flash***. This will open the Flash settings page which starts with some info on your USB drive and a <kbd>FLASH BACKUP</kbd> button. Clicking this will create and download a zip file which can be used to restore or recreate your unraid boot drive. This can be done on a schedule with the [[unraid/plugins#essential-plugins|My Servers plugin]].
 
 Next is the SMB settings for the USB. This can be useful if you need to make persistent changes such as adding perminent ssh keys but for the most part you want to have this set to Export: No to keep it secure.
 
@@ -112,4 +112,4 @@ Once enbled you can then add apps and VMs under their respective tab. I don't ma
 
 # Community applications (The Apps Tab)
 
-Community applications should almost always be the first thing you do on an unraid server. Install instructions are on [plugins](/unraid/plugins).
+Community applications should almost always be the first thing you do on an unraid server. Install instructions are on [[unraid/plugins|plugins]].
