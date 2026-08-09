@@ -1,11 +1,8 @@
 ---
 title: Plugins
-description: A short list of useful plugins
-published: 1
-date: 2021-07-07T16:21:27.507Z
-tags: organisation
-editor: markdown
-dateCreated: 2021-06-23T15:04:59.432Z
+published: true
+created: 2021-06-23T15:04:59.432Z
+updated: 2021-07-07T16:21:27.507Z
 ---
 
 # Community Applications

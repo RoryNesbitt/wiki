@@ -1,11 +1,8 @@
 ---
 title: Traefik Reverse Proxy
-description: 
-published: 1
-date: 2023-04-16T19:09:15.410Z
-tags: 
-editor: markdown
-dateCreated: 2023-03-25T15:42:13.286Z
+published: true
+created: 2023-03-25T15:42:13.286Z
+updated: 2023-04-16T19:09:15.410Z
 ---
 
 Traefik is the reverse proxy I use due to the simplicity of adding a new service when that service is running on the same docker network.

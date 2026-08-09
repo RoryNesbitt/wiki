@@ -1,11 +1,8 @@
 ---
 title: Authlia authentication with LDAP
-description: 
-published: 1
-date: 2023-04-16T19:22:14.593Z
-tags: 
-editor: markdown
-dateCreated: 2023-04-15T18:38:00.184Z
+published: true
+created: 2023-04-15T18:38:00.184Z
+updated: 2023-04-16T19:22:14.593Z
 ---
 
 Authelia provides site wide login authentication with either a file of usernames or an LDAP server backend.
@@ -461,4 +458,3 @@ notifier:
       minimum_version: TLS1.2
 ...
 ```
-

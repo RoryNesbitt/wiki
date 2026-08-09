@@ -1,11 +1,8 @@
 ---
 title: Readme
-description: Main page for the github backup
-published: 1
-date: 2021-06-20T22:45:12.529Z
-tags: 
-editor: markdown
-dateCreated: 2021-06-20T18:12:44.473Z
+published: true
+created: 2021-06-20T18:12:44.473Z
+updated: 2021-06-20T22:45:12.529Z
 ---
 
 # Documentation Wiki

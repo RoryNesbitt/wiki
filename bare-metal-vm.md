@@ -1,11 +1,8 @@
 ---
 title: Bare Metal VM
-description: Hardware passthrough for your existing OS
 published: true
-date: 2026-03-21T20:33:40.005Z
-tags: 
-editor: markdown
-dateCreated: 2026-03-01T15:06:41.871Z
+created: 2026-03-01T15:06:41.871Z
+updated: 2026-03-21T20:33:40.005Z
 ---
 
 This guide is intended to take an existing bare-metal install of an OS and let your access it in 3 different ways.

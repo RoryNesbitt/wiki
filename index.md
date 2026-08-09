@@ -1,11 +1,8 @@
 ---
 title: Home
-description: Documentation for my servers
-published: 1
-date: 2023-03-26T11:40:25.659Z
-tags: 
-editor: markdown
-dateCreated: 2023-03-19T20:38:01.230Z
+published: true
+created: 2023-03-19T20:38:01.230Z
+updated: 2023-03-26T11:40:25.659Z
 ---
 
 ![rnd.png](/assets/general/rnd.png){.align-abstopright}
